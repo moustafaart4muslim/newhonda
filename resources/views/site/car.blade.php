@@ -18,10 +18,10 @@
 			<div class="sub_logo"><img src="{{ url('storage/' . $car->logo ) }}" alt="{{ $car->$db_name }}"></div>
 			<div class="car_menu" id="sub_menu_adj" style="margin-left: 209.326px;">
 				<ul>
-					<li><a rel="Model_Overview" id="overview_link" href="javascript:void(0)" class="move_to selected" id="selected">Model Overview</a></li>
-					<li><a class="move_to" rel="Gallery" href="javascript:void(0)">Gallery</a></li>
-					<li><a class="move_to" rel="Colors" href="javascript:void(0)">Colors</a></li>
-					<li><a class="move_to" rel="Videos" href="javascript:void(0)">Videos</a></li>
+					<li><a rel="Model_Overview" id="overview_link" href="javascript:void(0)" class="move_to selected" id="selected">{{__('Model Overview')}}</a></li>
+					<li><a class="move_to" rel="Gallery" href="javascript:void(0)">{{__('Gallery')}}</a></li>
+					<li><a class="move_to" rel="Colors" href="javascript:void(0)">{{__('Colors')}}</a></li>
+					<li><a class="move_to" rel="Videos" href="javascript:void(0)">{{__('Videos')}}</a></li>
 					<!-- <li><a href="Cars/Civic/Econ">Econ</a></li> -->
 					<li><a href="{{ url('car/'.$car->en_name.'/Specifications/' . $car->id) }}">Specifications</a></li>
 				</ul>
@@ -88,7 +88,7 @@
 				<div class="con_title_set title_gray" id="title1">
 					<div class="title_shape dark_shape"></div>
 					<div class="title_arrow dark_arrow"></div>
-					<div class="con_title"><{{  $car->$db_name}} <br />Gallery</div>
+					<div class="con_title"><{{  $car->$db_name}} <br />{{__('Gallery')}}</div>
 				</div>
 				<div class="main" role="main">
 					<div class="content">
@@ -146,7 +146,7 @@
 			<div class="con_title_set title_red" id="title2">
 				<div class="title_shape red_shape"></div>
 				<div class="title_arrow red_arrow"></div>
-				<div class="con_title">{{ $car->$db_name }} <br /> Colors</div>
+				<div class="con_title">{{ $car->$db_name }} <br /> {{__('Colors')}}</div>
 			</div>
 			<div class="car_set">
 				<div class="car_adj">
@@ -194,7 +194,7 @@
 								<div class="gallery_caption_set" style="bottom: -105px; opacity: 0;">
 									<div class="gallery_caption_arrow"></div>
 									<div class="gallery_caption" style="margin-top: -18px; backgrou-color:{{ $media->getCustomProperty('color' ) }}"> 
-										Honda {{$car->$db_name}}
+										{{__('Honda')}} {{$car->$db_name}}
 									</div>
 								</div>
 							</a>
@@ -213,8 +213,29 @@
 
 	<section class="ve_container con_videos" data-title="Videos">
 		<div class="video_ex_title_set" style="opacity: 1;">
-			<div class="video_ex_title" style="left: 0px; opacity: 1;">EXPLORE HONDA {{ $car->$db_name }}<br>VIDEOS</div>
-			<div class="video_ex_sub" style="left: 0px; opacity: 1;">check out latest videos of honda {{ $car->$db_name }}, features and news</div>
+			<div class="video_ex_title" style="left: 0px; opacity: 1;">
+		
+					@if(resolve('lang') == 'eg')
+						EXPLORE HONDA {{ $car->$db_name }}<br>VIDEOS
+					@else
+						فيديو
+					@endif
+
+
+			
+			</div>
+			<div class="video_ex_sub" style="left: 0px; opacity: 1;">
+		
+				@if(resolve('lang') == 'eg')
+					check out latest videos of honda {{ $car->$db_name }}, features and news
+				@else
+					شاهد أحدث فيديوهات هوندا سيفيك ، المميزات ، واخر الأخبار
+
+
+				@endif
+		
+		
+			</div>
 		</div>
 		<div class="con_video_set" style="left: 0px; opacity: 1;">
 			<div class="con_video_thumb">
