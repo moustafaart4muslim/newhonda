@@ -155,7 +155,7 @@ function mbAnimate(){
 
 function fvstarsAnimate(){
 	$('.five_stars_logo').animate({opacity:1}).transition({ rotate: '0deg' });
-	if(window.lang == 'eg'){
+	if(window.lang == 'en'){
 		$('.five_stars_block').each(function(i) {
 			var pos = $(this).attr('data-title');
 			setTimeout(function() {

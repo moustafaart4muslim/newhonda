@@ -6,7 +6,7 @@
 	crossorigin="anonymous"></script>
 
 @endsection
-@section('title') Honda Egypt Inspiration @endsection
+@section('title')  {{ __('Honda Egypt Inspiration') }} @endsection
 
 
 @section('content')

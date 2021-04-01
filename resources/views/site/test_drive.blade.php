@@ -5,7 +5,7 @@
 
 @endsection
 
-@section('title') Honda Egypt Test drive @endsection
+@section('title')  {{ __('Honda Egypt Test drive') }} @endsection
 
 @section('content')
 <div class="wrapper container" id="about">

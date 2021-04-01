@@ -7,7 +7,7 @@
 
 @endsection
 
-@section('title') Honda Environment @endsection
+@section('title')  {{ __('Honda Environment ') }}@endsection
 
 @section('content')
 

@@ -11,7 +11,7 @@
 	<meta name="author" content="Bahaa Samir" >
 	<meta property="og:image" content="http://hondaegypt.com.eg/structure/so/ogp.png" >
 	<meta property="og:image:secure_url" content="https://hondaegypt.com.eg/structure/so/ogp.png" >
-	<title>@yield('title') | Official Honda Egypt Website </title>
+	<title>@yield('title') | {{__('Official Honda Egypt Website')}} </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="true">

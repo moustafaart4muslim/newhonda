@@ -101,7 +101,7 @@
 				  <div class="five_stars_block_logo_responsive">
 					  <div class="five_stars_text m-auto">
 						<h2>Honda warranty</h2>
-						<a href='{{ url("warranty") }}'>Read More</a>
+						<a href='{{ url("warranty") }}'>{{__('Read More')}}</a>
   
 					  </div>
 				  </div>

@@ -9,7 +9,7 @@
 	crossorigin="anonymous"></script>
 
 @endsection
-@section('title')  Honda {{$car->$db_name}} @endsection
+@section('title')  {{__('Honda')}} {{$car->$db_name}} @endsection
 
 @section('content')
 
@@ -23,12 +23,12 @@
 					<li><a class="move_to" rel="Colors" href="javascript:void(0)">{{__('Colors')}}</a></li>
 					<li><a class="move_to" rel="Videos" href="javascript:void(0)">{{__('Videos')}}</a></li>
 					<!-- <li><a href="Cars/Civic/Econ">Econ</a></li> -->
-					<li><a href="{{ url('car/'.$car->en_name.'/Specifications/' . $car->id) }}">Specifications</a></li>
+					<li><a href="{{ url('car/'.$car->en_name.'/Specifications/' . $car->id) }}">{{__('Specifications')}}</a></li>
 				</ul>
 			</div>
 			<div class="car_menu"  id="responsivecar_menu"   style="margin-left: 209.326px;">
 				<ul>
-					<li><a href="{{ url('car/'.$car->en_name.'/Specifications/' . $car->id) }}"  >Specifications</a></li>
+					<li><a href="{{ url('car/'.$car->en_name.'/Specifications/' . $car->id) }}"  >{{__('Specifications')}}</a></li>
 				</ul>
 			</div>
 
@@ -215,7 +215,7 @@
 		<div class="video_ex_title_set" style="opacity: 1;">
 			<div class="video_ex_title" style="left: 0px; opacity: 1;">
 		
-					@if(resolve('lang') == 'eg')
+					@if(resolve('lang') == 'en')
 						EXPLORE HONDA {{ $car->$db_name }}<br>VIDEOS
 					@else
 						فيديو
@@ -226,7 +226,7 @@
 			</div>
 			<div class="video_ex_sub" style="left: 0px; opacity: 1;">
 		
-				@if(resolve('lang') == 'eg')
+				@if(resolve('lang') == 'en')
 					check out latest videos of honda {{ $car->$db_name }}, features and news
 				@else
 					شاهد أحدث فيديوهات هوندا سيفيك ، المميزات ، واخر الأخبار

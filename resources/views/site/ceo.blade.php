@@ -6,7 +6,7 @@
 	crossorigin="anonymous"></script>
 
 @endsection
-@section('title') CEO Message @endsection
+@section('title') {{ __('CEO Message') }} @endsection
 
 
 @section('content')

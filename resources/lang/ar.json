@@ -1,9 +1,25 @@
 {
     "Honda" : "هوندا",
+
     "About" : "عن هوندا",
+    "About us" : "عن هوندا",
+    "Official Honda Egypt Website" : "موقع هوندا مصر الرسمى",
+    "CEO Message" : "كلمة الرئيس التنفيذي",
+    "Dealers" : "الموزعين المعتمدين",
+    "Honda Environment " : "البيئة",
+    "Honda Egypt events" : "احداث ومناسبات هوندا",
+    "Honda Egypt fivestars" : "خدمات هوندا خمسة نجوم",
+    "Honda Egypt Inspiration" : "الإلهام",
+    "Honda Egypt Maintenance" : "صيانة هوندا",
+    "Motorcycle" : "دراجات نارية",
+    "Honda  Motorcycles" : "دراجات نارية",
+    "Honda Egypt Recall" : "استدعاء",
+    "Honda Egypt Test drive" : "خدمات هوندا خمسة نجوم-اختبار القيادة",
+    "Honda Egypt Trade in" : "خدمات هوندا خمسة نجوم-استبدل سيارتك",
+
+
     "About Honda" : "نبذة عن شركة هوندا",
     "CEO message" : "كلمة الرئيس التنفيذى",
-    "CEO Message" : "كلمة الرئيس التنفيذى",
     "Events" : "احداث ومناسبات",
     "Inspiration" : "الإلهام",
     "Environment" : "البيئة",
@@ -75,6 +91,13 @@
     "Car Model" : "الموديل",
     "Chassis Number" : "رقم الشاسيه",
     "All" : "الجميع",
+    "HOME" : "الرئيسية",
+    "Five Stars" : "خدمات هوندا",
+    "CONTACT US" : "اتصل بنا",
+    "Read More" : "المزيد",
+    "five stars" : "خمسة نجوم",
+    "services" : "خدمات",
+    
+    
     "Name" : "الاسم"
-
 }

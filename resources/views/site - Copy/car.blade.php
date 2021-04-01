@@ -215,7 +215,7 @@
 		<div class="video_ex_title_set" style="opacity: 1;">
 			<div class="video_ex_title" style="left: 0px; opacity: 1;">
 		
-					@if(resolve('lang') == 'eg')
+					@if(resolve('lang') == 'en')
 						EXPLORE HONDA {{ $car->$db_name }}<br>VIDEOS
 					@else
 						فيديو

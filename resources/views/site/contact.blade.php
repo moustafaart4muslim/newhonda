@@ -4,7 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
 
 @endsection
-@section('title') Contact us @endsection
+@section('title')  {{ __('Contact us') }} @endsection
 
 @section('content')
 

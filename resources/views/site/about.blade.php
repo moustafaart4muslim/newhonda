@@ -7,7 +7,7 @@
 
 @endsection
 
-@section('title') About us @endsection
+@section('title') {{ __('About us') }} @endsection
 
 @section('content')
 

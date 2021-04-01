@@ -8,7 +8,7 @@
 <script type="text/javascript" src="{{ asset( 'assets/javascript/jquery-migrate.js')}}"></script>
 
 @endsection
-@section('title') Honda {{$motor->$db_name}} Motorcycle @endsection
+@section('title')  {{ __('Honda') }} {{$motor->$db_name}}  {{ __('Motorcycle') }} @endsection
 
 @section('content')
 

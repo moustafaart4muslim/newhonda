@@ -10,7 +10,7 @@
 
 @endsection
 
-@section('title') Honda  Motorcycles @endsection
+@section('title')  {{ __('Honda  Motorcycles') }} @endsection
 
 @section('content')
 
@@ -149,7 +149,7 @@
 		<div class="video_ex_title_set" style="opacity: 1;">
 			<div class="video_ex_title" style="left: 0px; opacity: 1;">
 				
-				@if(resolve('lang') == 'eg')
+				@if(resolve('lang') == 'en')
 					EXPLORE HONDA <br>VIDEOS
 				@else
 					فيديو
@@ -157,7 +157,7 @@
 			</div>
 			<div class="video_ex_sub" style="left: 0px; opacity: 1;">
 			
-				@if(resolve('lang') == 'eg')
+				@if(resolve('lang') == 'en')
 					Check out latest videos of HONDA MOTORCYCLES AND EVENTS
 				@else
 					شاهد أحدث فيديوهات الدراجات النارية من هوندا

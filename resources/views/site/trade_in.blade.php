@@ -5,7 +5,7 @@
 
 @endsection
 
-@section('title') Honda Egypt Trade in @endsection
+@section('title')  {{ __('Honda Egypt Trade in') }} @endsection
 
 @section('content')
 

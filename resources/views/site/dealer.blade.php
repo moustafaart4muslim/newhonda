@@ -6,7 +6,7 @@
 	crossorigin="anonymous"></script>
 
 @endsection
-@section('title') Honda {{ ucfirst( $sub) }} Dealers @endsection
+@section('title')  {{ __('Honda') }} {{ ucfirst( $sub) }}  {{ __('Dealers') }} @endsection
 
 
 @section('content')

@@ -82,7 +82,7 @@ class BaseController extends Controller
             $url_arr = explode('//', url()->current());
 //            dd($url_arr);
             $url_arr[1] = substr( $url_arr[1], 3);
-            $new_url = $url_arr[0] . '//'  ;
+            $new_url = $url_arr[0] . '//'  . 'new.' ;
             foreach($url_arr as $k=>$v){
                 if($k == 0){
                     continue;
@@ -95,13 +95,14 @@ class BaseController extends Controller
             //it's English, add ar subdomain to create the same page  url for ar
             $url_arr = explode('//', url()->current());
 //            dd($url_arr);
-            $new_url = $url_arr[0] . '//' . 'ar.' ;
+            $the_new = $url_arr[0] . '//' . 'ar.' ;
             foreach($url_arr as $k=>$v){
                 if($k == 0){
                     continue;
                 }
-                $new_url .=$v;
+                $the_new .=$v;
             }
+            $new_url = str_replace("new.","",$the_new);
         }
 
 

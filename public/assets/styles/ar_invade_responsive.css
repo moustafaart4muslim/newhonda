@@ -117,3 +117,10 @@
   #motors_header .sub_menu_box_element {
     width: 160px;
   }
+  @media (MIN-width: 793px) {
+
+    #menu{
+      margin-left: 54px;
+    }
+
+  }

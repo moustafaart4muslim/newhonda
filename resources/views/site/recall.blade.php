@@ -4,7 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
 @endsection
 
-@section('title') Honda Egypt Recall @endsection
+@section('title')  {{ __('Honda Egypt Recall') }} @endsection
 
 @section('content')
 

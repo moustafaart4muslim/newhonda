@@ -4,7 +4,7 @@
 	<div class="footer_main container">
 		<div class="footer_container row">
 			<section class="footer_grid col-lg-2 col-sm-4 col-6 pl-0 pr-0   ">
-				<h5 class="footerh5">Home</h5>
+				<h5 class="footerh5">{{ __('Home') }}</h5>
 				<ul>
 					<li><a href="{{ url('about') }}">{{ __('About') }}</a></li>
 					<li><a href="{{ url('cars') }}">{{ __('Cars') }}</a></li>
@@ -14,7 +14,7 @@
 					<li><a href="{{ url('recall') }}">{{ __('Recall') }}</a></li>
 				</ul>
 			</section><section class="footer_grid col-lg-2 col-sm-4 col-6 pl-0 pr-0  ">
-				<h5 class="footerh5">Honda Cars</h5>
+				<h5 class="footerh5">{{__('Honda')}} {{__('Cars')}}</h5>
 				<ul>
                     @foreach($cars as $car)
     					<li><a href="{{ urls('cars', $car->en_name, $car->id ) }} "> {{$car->$db_name }} </a></li>
