@@ -102,6 +102,18 @@ class Page extends Resource
 
     protected function motors(){
         return [
+            Text::make('English content', 'motors_en_title')
+            ->hideFromIndex()
+            ->rules('required'),
+
+            Text::make('Arabic content', 'motors_ar_title')
+            ->hideFromIndex()
+            ->rules('required' )
+            ->withMeta(['extraAttributes' => [
+                'class'=> 'rtl'
+                ]
+            ]),
+
             Textarea::make('English content', 'motors_en_details')
             ->hideFromIndex()
             ->rules('required'),

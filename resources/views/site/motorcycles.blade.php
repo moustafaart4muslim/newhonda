@@ -24,7 +24,7 @@
 				<ul>
 					@foreach($cats as $cat)
 						<li><a class="for_ani  {{ $sub_mod == $cat->en_name ? 'seected' : '' }}" rel="{{ $cat->en_name }}"
-							 href="javascript:void(0)">{{  $cat->en_name }}</a></li>
+							 href="javascript:void(0)">{{  $cat->$db_name }}</a></li>
 					@endforeach
 				</ul>
 			</div> <!-- Sub Menu End -->
@@ -79,9 +79,15 @@
 			<div class="about_ve_set motors">
 				<div class="about_ve_logo ve_logo motors_logo" style="height: 185px; top: 0px;"></div>
 				<div class="about_ve_content" style="top: 0px;">
-					<div class="about_ve_title">55 years of Honda Racing</div>
+					
+					<?php
+						$title = 'motors_' . $db_title;
+						$details = 'motors_' . $db_info;
+						?>
+					<div class="about_ve_title">{{$page->{$title} }}</div>
 					<div class="about_ve">
-						{{$page->motors_en_details}}
+						{{$page->{$details} }}
+
 					</div>
 				</div>
 			</div>
@@ -95,7 +101,7 @@
 				<div class="con_title_set title_gray" id="title1">
 					<div class="title_shape dark_shape"></div>
 					<div class="title_arrow dark_arrow"></div>
-					<div class="con_title">Motorcycles<br>Gallery</div>
+					<div class="con_title">{{__('Gallery')}}</div>
 				</div>
 				<div class="main" role="main">
 					<div class="content">
@@ -141,8 +147,25 @@
 
 	<section class="ve_container con_videos" data-title="Videos">
 		<div class="video_ex_title_set" style="opacity: 1;">
-			<div class="video_ex_title" style="left: 0px; opacity: 1;">EXPLORE HONDA <br>VIDEOS</div>
-			<div class="video_ex_sub" style="left: 0px; opacity: 1;">Check out latest videos of HONDA MOTORCYCLES AND EVENTS</div>
+			<div class="video_ex_title" style="left: 0px; opacity: 1;">
+				
+				@if(resolve('lang') == 'eg')
+					EXPLORE HONDA <br>VIDEOS
+				@else
+					فيديو
+				@endif
+			</div>
+			<div class="video_ex_sub" style="left: 0px; opacity: 1;">
+			
+				@if(resolve('lang') == 'eg')
+					Check out latest videos of HONDA MOTORCYCLES AND EVENTS
+				@else
+					شاهد أحدث فيديوهات الدراجات النارية من هوندا
+
+				@endif
+			
+			
+			</div>
 		</div>
 		<div class="con_video_set" style="left: 0px; opacity: 1;">
 			<div class="con_video_thumb">
@@ -234,9 +257,17 @@
 
 
 
-			to = $("#sub_menu_adj").offset().top ;
+			to = $("#main_slider").offset().top ;
 			$('html, body').animate({
-				scrollTop: to 
+				scrollTop: to ,
+				// complete:  function() { 
+					
+				// 	$('html, body').animate({
+				// 		scrollTop: 1 
+				// 	}, 1000);
+
+				// } 
+
 			}, 1000);
 
 

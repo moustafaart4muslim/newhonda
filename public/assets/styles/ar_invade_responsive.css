@@ -77,3 +77,15 @@
   .ceo_set img{
       float: right;
   }
+
+
+  .video_ex_title_set{
+    padding-bottom: 80px;;
+  }
+
+  .video_ex_title,.video_ex_sub{
+    right: 0;
+  }
+  .con_videos_set{
+    float: right;
+  }
