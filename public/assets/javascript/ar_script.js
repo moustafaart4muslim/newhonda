@@ -663,12 +663,12 @@ function HondaMotors() {
 	$('.content').HondaScrollAnimate('GalleryAnimate');
 	$('.con_videos').HondaScrollAnimate('ConVideoTitleAnimate');
 	$('.title_box_set').HondaScrollAnimate('SpecificationsAnimate');
-	$(".portfolioListing").quicksandpaginated({
-		callback:function() { 
-			$("a[rel^='lightbox-gallery']").slimbox()
-			$('.portfolioListing').HondaGallery()
-		}
-	});
+	// $(".portfolioListing").quicksandpaginated({
+	// 	callback:function() { 
+	// 		$("a[rel^='lightbox-gallery']").slimbox()
+	// 		$('.portfolioListing').HondaGallery()
+	// 	}
+	// });
 	WaitFun('HondaMotorsFunc')
 }
 function HondaMotorsFunc(){
