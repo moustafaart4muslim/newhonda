@@ -543,7 +543,7 @@ function HondaCarColors(){
 	$('.color_button').click(function(e) {
 		if ( !$('.car_adj').is(":animated") && !$(this).hasClass('view')) {
 			var car = $(this).attr("data-car");
-			var src = '../structure/cars/colors/src/' + car +'.png';
+			var src =  car ;
 	
 			$('.color_button').removeClass('view').stop().animate({opacity:1});
 			$(this).addClass('view');
