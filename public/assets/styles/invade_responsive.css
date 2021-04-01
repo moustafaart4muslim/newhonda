@@ -951,3 +951,6 @@ body {
 .ar .menu ul li{
     
 }
+.ar .sub_menu_item a{
+  float: right;
+}
