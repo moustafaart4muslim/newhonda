@@ -107,7 +107,17 @@ function HondaHomePage() {
 	$('.five_stars_block').hover(function(){
 		if( $(this).find('.five_stars_block_overlay').length == 0) {
 			var servName = $(this).attr('id');
-			$(this).append('<div class="five_stars_block_overlay">read more<br />about honda<br />'+ servName +'</div>');
+			if(window.lang == 'en'){
+
+				more = 'read more';
+				about = ' about honda ';
+			}else{
+				more = 'اقرأ المزيد';
+				about = ' عن ';
+	
+			}
+
+			$(this).append('<div class="five_stars_block_overlay">' + more + '<br />' + about + '<br />'+ servName +'</div>');
 			$(this).find('.five_stars_block_overlay').stop(true, true).fadeIn()
 			$(this).find('.five_stars_block_logo').stop(true, true).transition({ scale: 1.3 });
 		}

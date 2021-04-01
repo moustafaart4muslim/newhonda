@@ -67,23 +67,23 @@
 					<div class="five_stars_arrow"></div>
 				</div>
 
-				<div class="five_stars_block warranty start" id="warranty" data-title="193" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block warranty start" id="warranty" data-serv="{{ __('warranty') }}" data-title="193" onclick="window.open('fivestars/','_self')">
 				  <div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block trade_in" id="trade-in" data-title="347" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block trade_in" id="trade-in" data-serv="{{ __('trade-in') }}" data-title="347" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block maintenancee" id="maintenancee" data-title="501" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block maintenancee" id="maintenancee" data-serv="{{ __('maintenancee') }}" data-title="501" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block test_drive" id="test_drive" data-title="655" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block test_drive" id="test_drive" data-serv="{{ __('test drive') }}" data-title="655" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block insurance" id="insurance" data-title="809" onclick="window.open('fivestars','_self')">
+				<div class="five_stars_block insurance" id="insurance" data-serv="{{ __('insurance') }}" data-title="809" onclick="window.open('fivestars','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
