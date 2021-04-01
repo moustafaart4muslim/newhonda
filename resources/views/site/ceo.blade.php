@@ -16,9 +16,9 @@
 		<section class="title_box_set">
 			<div class="title_box_border"></div>
 			<div class="box_set box_red box_center" style="left: 0px; top: 0px;"><div class="box_icon box_ceo" style="left: 0px; transform: rotate(0deg);"></div></div>
-			<div class="box_title" style="top: 0px;">CEO message</div>
+			<div class="box_title" style="top: 0px;">{{__('CEO message')}}</div>
 		</section>
-		<div class="responsive_title_box">CEO message</div>
+		<div class="responsive_title_box">{{__('CEO message')}}</div>
 
 		<section class="under_box">
             <?php

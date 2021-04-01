@@ -20,13 +20,9 @@
 					<div class="box_inspiration_mask_2 mask_rem"></div>
 				</div>				
 			</div>
-			<div class="box_title">Events</div>
+			<div class="box_title">{{__('Events')}}</div>
 		</section>
-		<div class="responsive_title_box">Events</div>
-
-		<section class="under_box" id="ins1">
-			<div class="paragraph p40">"Do Not Imitate." The mandate of Soichiro Honda echoes in the minds and hearts of everyone at Honda. At Honda, we are constantly striving to seek out new initiatives and stay at the forefront of innovation.<br />As an organization dedicated to the advancement of mobility, we have always targeted leading-edge technologies. From our racing spirit to our dedication to our environmental leadership, it is Honda's mission to develop forward-thinking technologies that anticipate and satisfy the needs of a future society.</div>
-		</section>
+		<div class="responsive_title_box">{{_('Events')}}</div>
 
 		@foreach($model as $event)
 			<section class="t_flight" id="t_flight{{ $event->id }}">

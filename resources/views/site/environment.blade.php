@@ -28,9 +28,9 @@
 					
 				</div>				
 			</div>
-			<div class="box_title" style="top: 0px;">Environment</div>
+			<div class="box_title" style="top: 0px;">{{__('Environment')}}</div>
 		</section>
-		<div class="responsive_title_box">Environment</div>
+		<div class="responsive_title_box">{{__('Environment')}}</div>
 
 		<section class="under_box">
 			<div class="blue_skies_set">
@@ -47,8 +47,17 @@
 			<div class="single_video_set" style="left: 0px; opacity: 1;">
 				<div class="video_data_set">
 					<div class="video_data">
+
+					@if(resolve('lang') == 'en')
 						<div class="video_title">Blue Skies for our Children</div>
 						<div class="video_sub_title">The joy and freedom of mobility and a sustainable society where people can enjoy life</div>
+					@else
+						<div class="video_title">السماوات الزرقاء لأطفالنا</div>
+						<div class="video_sub_title">سعادة وحرية القابلية للحركة والمجتمع المستدام، حيث يمكن للأشخاص الاستمتاع بالحياة</div>
+
+					@endif
+
+
 					</div>
 				</div>
 				<div class="video_set">
@@ -61,17 +70,47 @@
 					</div>
 				</div>			</div>
 		</section>
-		<section class="green_c_set">
-			<div class="green_c_logo" style="opacity: 1; transform: rotate(0deg);"></div>
-			<div class="green_c_title green_dis" style="opacity: 1; left: 0px;">Honda Green Company</div>
-			<div class="green_c_sub_title_set">
-				<div class="green_c_sub_title green_dis" style="opacity: 1; left: 0px;">N.3 World Wide</div>
-				<div class="green_c_star" style="display: block; transform: rotate(0deg);"></div>
-				<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
-				<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
-			</div>
-			<div class="green_c_sub_data green_dis" style="opacity: 1; left: 0px;">Currently Honda ranked 3rd as the most green company<br>in the entire world, as per Interbrand.</div>
-		</section>
+
+
+
+
+
+
+
+		@if(resolve('lang') == 'en')
+			<section class="green_c_set">
+				<div class="green_c_logo" style="opacity: 1; transform: rotate(0deg);"></div>
+				<div class="green_c_title green_dis" style="opacity: 1; left: 0px;">Honda Green Company</div>
+				<div class="green_c_sub_title_set">
+					<div class="green_c_sub_title green_dis" style="opacity: 1; left: 0px;">N.3 World Wide</div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg);"></div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
+				</div>
+				<div class="green_c_sub_data green_dis" style="opacity: 1; left: 0px;">Currently Honda ranked 3rd as the most green company<br>in the entire world, as per Interbrand.</div>
+			</section>
+		@else
+			<section class="green_c_set">
+				<div class="green_c_logo" style="opacity: 1; transform: rotate(0deg);"></div>
+				<div class="green_c_title green_dis" style="opacity: 1; left: 0px;">هوندا الشركة الخضراء</div>
+				<div class="green_c_sub_title_set">
+					<div class="green_c_sub_title green_dis" style="opacity: 1; left: 0px;">N.3 العالمية</div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg);"></div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
+					<div class="green_c_star" style="display: block; transform: rotate(0deg); transition: transform 400ms ease 0s;"></div>
+				</div>
+				<div class="green_c_sub_data green_dis" style="opacity: 1; left: 0px;">حالياً تحتل هوندا المركز الثالث كأكثر الشركات الخضراء في العالم بأسره،<br>
+وفقاً لشركة Interbrand.</div>
+			</section>
+
+		@endif
+
+
+
+
+
+
+
 
 		@if( $page->additional_environment)
 			{{ $page->additional_environment}}

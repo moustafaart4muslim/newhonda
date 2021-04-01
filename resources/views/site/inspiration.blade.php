@@ -20,12 +20,22 @@
 					<div class="box_inspiration_mask_2 mask_rem"></div>
 				</div>				
 			</div>
-			<div class="box_title">Inspiration</div>
+			<div class="box_title">{{__('Inspiration')}}</div>
 		</section>
-		<div class="responsive_title_box">Inspiration</div>
+		<div class="responsive_title_box">{{__('Inspiration')}}</div>
 
 		<section class="under_box" id="ins1">
-			<div class="paragraph p40">"Do Not Imitate." The mandate of Soichiro Honda echoes in the minds and hearts of everyone at Honda. At Honda, we are constantly striving to seek out new initiatives and stay at the forefront of innovation.<br />As an organization dedicated to the advancement of mobility, we have always targeted leading-edge technologies. From our racing spirit to our dedication to our environmental leadership, it is Honda's mission to develop forward-thinking technologies that anticipate and satisfy the needs of a future society.</div>
+			<div class="paragraph p40">
+	
+				@if(resolve('lang') == 'en')
+					"Do Not Imitate." The mandate of Soichiro Honda echoes in the minds and hearts of everyone at Honda. At Honda, we are constantly striving to seek out new initiatives and stay at the forefront of innovation.<br />As an organization dedicated to the advancement of mobility, we have always targeted leading-edge technologies. From our racing spirit to our dedication to our environmental leadership, it is Honda's mission to develop forward-thinking technologies that anticipate and satisfy the needs of a future society.
+				@else
+					"لا تقلد". إن لأمر سويشيرو هوندا صدى في عقول وقلوب الجميع في شركة هوندا. ونحن في هوندا نسعى باستمرار نحو المبادرات الجديدة ونبقى في مقدمة الابتكار. وبصفتنا مؤسسة تسعى إلى تطوير القابلية للحركة، فقد استهدفنا دوماً التقنيات الرائدة. ومن روحنا السباقية إلى التزامنا نحو القيادة البيئية، فهي مهمة هوندا لتطوير التقنيات المتقدمة التي تلبي وترضي احتياجات المجتمع المستقبلي.
+
+				@endif
+
+		
+			</div>
 			<!-- <div class="ph3 c_red">The Racing Spirit:</div> 
 			<div class="paragraph pb20">For almost 50 years, Honda has turned to racing as the perfect training ground for both engineers and designers. According to Soichiro Honda, the pressures of racing challenges people, forces them to find innovative solutions and demands quick, accurate responses to new problems they've never faced before.<br />Racing is ingrained in the corporate culture of Honda. Mr. Honda always stressed that racing teaches teamwork. No single individual can bring success; racing is a group effort.</div>
 			<div class="paragraph pb20">Throughout its existence, on both two wheels and four, Honda has raced—and won—at the highest levels. From the Isle of Man TT motorcycle race to the Indy 500, Honda can be found in victory lanes around the world.</div> -->

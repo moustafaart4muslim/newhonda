@@ -40,13 +40,13 @@
 				<div class="box_specifications pt1"></div>				
 				<div class="box_specifications pt2"></div>				
 			</div>
-			<div class="box_title">Specifications</div>
+			<div class="box_title">{{ __('Specifications')}}</div>
 		</section>
-		<div class="responsive_title_box">Specifications</div>
+		<div class="responsive_title_box">{{ __('Specifications')}}</div>
 
 		<section class="under_box">
 			<div class="specific_title_set">
-				<div class="specific_main_title">Honda {{ $car->$db_name }}</div>
+				<div class="specific_main_title">{{ __('Honda')}} {{ $car->$db_name }}</div>
 				<div class="specific_sub_title">{{ $car->$db_title }}</div>
 			</div>
 
@@ -55,7 +55,7 @@
 
 			<div class="specific_header">
 				<div class="specific_border"></div>
-				<span>Specifications</span>
+				<span>{{ __('Specifications')}}</span>
 			</div>
 
 

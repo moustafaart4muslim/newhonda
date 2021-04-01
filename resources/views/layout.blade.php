@@ -25,7 +25,10 @@
 	
 	
 	<link href="{{ asset( 'assets/styles/invade_responsive.css?v='  . config('app.version'))}}" rel="stylesheet" type="text/css" >
-
+	
+	@if(resolve('lang') == 'ar')
+		<link href="{{ asset( 'assets/styles/ar_invade_responsive.css?v='  . config('app.version'))}}" rel="stylesheet" type="text/css" >
+	@endif
 	<script>
 		window.lang = "{{resolve('lang')}}";
 	</script>

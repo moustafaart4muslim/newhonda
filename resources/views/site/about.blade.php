@@ -16,9 +16,10 @@
 		<section class="title_box_set">
 			<div class="title_box_border"></div>
 			<div class="box_set box_red box_center" style="left: 0px; top: 0px;"><div class="box_icon box_about" style="left: 0px; transform: rotate(0deg);"></div></div>
-			<div class="box_title" style="top: 0px;">About Honda</div>
+			<div class="box_title" style="top: 0px;">{{ __('About') }}  </div>
 		</section>
-		<div class="responsive_title_box">About Honda</div>
+		<div class="responsive_title_box">{{ __('About') }}  </div>
+
 
 		<section class="under_box">
 			<div class="paragraph_set" style="left: 0px; opacity: 1;">
