@@ -22,9 +22,12 @@
 			<div class="box_title" style="top: 0px;">
 			
 					@if($mod == "dealers")
-						Find a {{ $sub }} dealer.
+						
+						{{ __( 'Find a ' . $sub . ' dealer')}}.		
+
+
 					@else
-						Honda locations.
+						{{__('Honda Locations')}}
 					@endif
 
 			
@@ -32,9 +35,9 @@
 		</section>
 		<div class="responsive_title_box">
 					@if($mod == "dealers")
-						Find a {{ $sub }} dealer
+						{{ __( 'Find a ' . $sub . ' dealer')}}.		
 					@else
-						Honda locations
+						{{__('Honda Locations')}}
 					@endif
 
 	
@@ -47,9 +50,19 @@
 				
 				
 					@if($mod == "dealers")
-						Find an authorized Honda {{ $sub }} dealer near to your place.
+						@if(resolve('lang') == 'en')
+							Find an authorized Honda {{ $sub }} dealer near to your place.
+						@else
+							ابحث عن اقرب موزع معتمد لهوندا - {{ __($sub)}}
+						@endif
+					
 					@else
-						Find a Honda Showroom near to your place.
+						@if(resolve('lang') == 'en')
+							Find a Honda Showroom near to your place.
+						@else
+							ابحث عن اقرب معرض هوندا.
+						@endif
+					
 					@endif
 				
 				</div>

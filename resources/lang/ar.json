@@ -15,7 +15,10 @@
     "Insurance" : "التأمين",
     "Find a dealer" : "ايجاد وكيل",
     "Cars" : "سيارات",
+    "cars" : "سيارات",
     "Motorcycles" : "دراجات نارية",
+    "motorcycles" : "دراجات نارية",
+    
     "Honda Owners" : "مالكي هوندا",
     "Maintenance Booking" : "الصيانة",
     "Recall" : "استدعاء",
@@ -44,5 +47,8 @@
     "Latest Events" : "آخر الاحداث",
     "Request test drive" : "طلب اختبار القيادة",
     "Honda Five Star Service" : "خدمات هوندا خمسة نجوم",
-    "Trade in Your Car" : "استبدل سيارتك"
+    "Trade in Your Car" : "استبدل سيارتك",
+    "Find a cars dealer" : "الموزعين المعتمدين - سيارات",
+    "Find a motorcycles dealer" : "الموزعين المعتمدين - دراجات نارية"
+
 }
