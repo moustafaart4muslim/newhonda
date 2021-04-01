@@ -73,3 +73,7 @@
       text-align: center;
       background-position: center center;
   }
+
+  .ceo_set img{
+      float: right;
+  }
