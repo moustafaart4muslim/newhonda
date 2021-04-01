@@ -929,3 +929,25 @@ body {
 .content{
   /* display: block; */
 }
+
+
+
+
+
+/*Arabic styles**/
+.ar .float-right{
+  float:left !important
+}
+.ar body,.ar .container,.ar *{
+  direction:rtl;
+}
+.ar .logo_set,.ar .menu ul li {
+  float: right;
+}
+.ar .menu_set {
+  float: left;
+}
+
+.ar .menu ul li{
+    
+}

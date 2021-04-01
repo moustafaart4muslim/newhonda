@@ -44,7 +44,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach($cars as $car)
-                            <a class="dropdown-item" href="{{ urls('cars', $car->en_name, $car->id) }}">{{ $car->$db_name}}</a>
+                            <a class="dropdown-item" href="{{ urls('cars', $car->en_name, $car->id) }}">{{ __('Honda') }} {{ $car->$db_name}}</a>
                         @endforeach
                     </div>
 				</li>
@@ -172,7 +172,7 @@
                                 class="sub_menu_box_element first" 
                                 style="margin-top: 6px; opacity: 0;">
                                     <div class="sub_name" style="opacity: 1;">
-                                    Honda {{ $car->$db_name }}
+                                    {{ __('Honda') }} {{ $car->$db_name }}
                                     </div><img
                                         src="{{ url( 'storage/' . $car->thumb) }}" alt="{{ $car->$db_name }}"
                                         class="img-fluid"

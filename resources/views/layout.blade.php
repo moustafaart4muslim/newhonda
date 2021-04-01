@@ -20,14 +20,14 @@
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
 	<link href="{{ asset( 'assets/styles/reset.css?v=' . config('app.version') )}}" rel="stylesheet" type="text/css" media="screen" >
-	<link href="{{ asset( 'assets/styles/layout.css?v=' . config('app.version'))}}" rel="stylesheet" type="text/css" media="screen" >
+	<link href="{{ asset( 'assets/styles/' . resolve('lang') . '_layout.css?v=' . config('app.version'))}}" rel="stylesheet" type="text/css" media="screen" >
 	<link href="{{ asset( 'assets/lightbox/css/lightbox.css')}}" rel="stylesheet" />
 	
 	
 	<link href="{{ asset( 'assets/styles/invade_responsive.css?v='  . config('app.version'))}}" rel="stylesheet" type="text/css" >
 </head>
 
-<body id="main" class="@yield('body_class')">
+<body id="main" class="{{resolve('lang')}} @yield('body_class')">
 
 
     @include('partials.header')
@@ -49,7 +49,7 @@
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/jquery.transit.min.js')}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/jquery.uncachedimg.js')}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/jquery.HondaSlider.js')}}"></script>
-	<script type="text/javascript" src="{{ asset( 'assets/javascript/functions.js?v=' . config('app.version') )}}"></script>
+	<script type="text/javascript" src="{{ asset( 'assets/javascript/' . resolve('lang') . '_functions.js?v=' . config('app.version') )}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/script.js?v='  . config('app.version'))}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/responsive_scripts.js?v='  . config('app.version') )}}"></script>
     <script>
