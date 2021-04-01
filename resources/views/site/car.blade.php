@@ -88,7 +88,7 @@
 				<div class="con_title_set title_gray" id="title1">
 					<div class="title_shape dark_shape"></div>
 					<div class="title_arrow dark_arrow"></div>
-					<div class="con_title"><{{  $car->$db_name}} <br />{{__('Gallery')}}</div>
+					<div class="con_title">{{  $car->$db_name}} <br />{{__('Gallery')}}</div>
 				</div>
 				<div class="main" role="main">
 					<div class="content">
@@ -170,7 +170,7 @@
 						data-car="{{ $color->getFullUrl() }}">
 					</div>
 				@endforeach
-				<div class="color_ins">click on the color to view on the model</div>
+				<div class="color_ins">{{__('click on the color to view on the model')}}</div>
 			</div>
 
 

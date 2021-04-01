@@ -93,3 +93,6 @@
   .ar .td_main{
     direction: ltr;
   }
+  .ve_container {
+    max-width: 100%;
+  }
