@@ -26,21 +26,21 @@
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About
+                        {{ __('About') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('about') }}">About Honda</a>
-                        <a class="dropdown-item" href="{{ url('ceo') }}">CEO Message</a>
-                        <a class="dropdown-item" href="{{ url('events') }}">Events</a>
-                        <a class="dropdown-item" href="{{ url('inspiration') }}">Inspiration</a>
-                        <a class="dropdown-item" href="{{ url('environment') }}">Environment</a>
+                        <a class="dropdown-item" href="{{ url('about') }}">{{ __('About Honda') }}</a>
+                        <a class="dropdown-item" href="{{ url('ceo') }}">{{ __('CEO Message') }}</a>
+                        <a class="dropdown-item" href="{{ url('events') }}">{{ __('Events') }}</a>
+                        <a class="dropdown-item" href="{{ url('inspiration') }}">{{ __('Inspiration') }}</a>
+                        <a class="dropdown-item" href="{{ url('environment') }}">{{ __('Environment') }}</a>
                     </div>
 				</li>
 
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cars
+                        {{ __('Cars') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach($cars as $car)
@@ -65,44 +65,44 @@
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Five stars
+						{{ __('Five stars') }} 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('fivestars') }}">Warranty</a>
-                        <a class="dropdown-item" href="{{ url('trade-in') }}">Trade-In</a>
-                        <a class="dropdown-item" href="{{ url('maintenance') }}">Maintenance</a>
-                        <a class="dropdown-item" href="{{ url('test-drive') }}">Test Drive</a>
-                        <a class="dropdown-item" href="{{ url('fivestars') }}">Insurance</a>
+                        <a class="dropdown-item" href="{{ url('fivestars') }}"> {{ __('Warranty') }}</a>
+                        <a class="dropdown-item" href="{{ url('trade-in') }}">{{ __('Trade-In') }}</a>
+                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
+                        <a class="dropdown-item" href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
+                        <a class="dropdown-item" href="{{ url('fivestars') }}">{{ __('Insurance') }}</a>
                     </div>
 				</li>
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Find a dealer
+					{{ __('Find a dealer') }}Find a dealer
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('find-cars-dealer') }}">Cars</a>
-                        <a class="dropdown-item" href="{{ url('find-motocycles-dealer') }}">Motorcycles</a>
+                        <a class="dropdown-item" href="{{ url('find-cars-dealer') }}">{{ __('Cars') }}</a>
+                        <a class="dropdown-item" href="{{ url('find-motocycles-dealer') }}">{{ __('Motorcycles') }}</a>
                     </div>
 				</li>
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Honda owners
+					{{ __('Honda owners') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('maintenance') }}">Maintainence</a>
-                        <a class="dropdown-item" href="{{ url('recall') }}">Recall</a>
+                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintainence') }}</a>
+                        <a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
                     </div>
 				</li>
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact us
+					{{ __('Contact us') }} 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('locations') }}">Locations</a>
-                        <a class="dropdown-item" href="{{ url('contact/send') }}">Send email</a>
+                        <a class="dropdown-item" href="{{ url('locations') }}">{{ __('Locations') }}</a>
+                        <a class="dropdown-item" href="{{ url('contact/send') }}">{{ __('Send email') }}</a>
                     </div>
 				</li>
 
@@ -129,42 +129,42 @@
 			<div class="menu_set" id="main_menu">
 				<div class="menu" id="menu">
 					<ul>
-						<li><a rel="sub_about" {{ $mod == "about"? "class=selected" : "" }} href="{{ url('about') }}">About</a></li>
-						<li><a rel="sub_cars"  {{ $mod == "cars"? "class=selected" : "" }} href="#">Cars</a></li>
-						<li><a rel="sub_motor"  {{ $mod == "motor"? "class=selected" : "" }} href="{{ url('motorcycles') }}">Motorcycles</a></li>
-						<li><a rel="sub_fs"  {{ $mod == "fivestars"? "class=selected" : "" }} href="{{ url('fivestars') }}">Five stars</a></li>
-						<li><a rel="sub_fd"  {{ $mod == "dealers"? "class=selected" : "" }} href="#">Find a dealer</a></li>
-						<li><a rel="sub_mb"  {{ $mod == "owners"? "class=selected" : "" }} href="{{ url('maintenance') }}">Honda Owners</a></li>
-						<li><a rel="sub_contact"  {{ $mod == "contact"? "class=selected" : "" }} href="#">Contact us</a></li>
+						<li><a rel="sub_about" {{ $mod == "about"? "class=selected" : "" }} href="{{ url('about') }}">{{ __('About') }}</a></li>
+						<li><a rel="sub_cars"  {{ $mod == "cars"? "class=selected" : "" }} href="#">{{ __('Cars') }}</a></li>
+						<li><a rel="sub_motor"  {{ $mod == "motor"? "class=selected" : "" }} href="{{ url('motorcycles') }}">{{ __('Motorcycles') }}</a></li>
+						<li><a rel="sub_fs"  {{ $mod == "fivestars"? "class=selected" : "" }} href="{{ url('fivestars') }}">{{ __('Five stars') }}</a></li>
+						<li><a rel="sub_fd"  {{ $mod == "dealers"? "class=selected" : "" }} href="#">{{ __('Find a dealer') }}</a></li>
+						<li><a rel="sub_mb"  {{ $mod == "owners"? "class=selected" : "" }} href="{{ url('maintenance') }}">{{ __('Honda Owners') }}</a></li>
+						<li><a rel="sub_contact"  {{ $mod == "contact"? "class=selected" : "" }} href="#">{{ __('Contact us') }}</a></li>
 					</ul>
 				</div> 
 				<div class="sub_menu">
 					<div class="mQuery sub_menu_item" id="sub_about">
-						<a href="{{ url('about') }}" class="first">About Honda</a>
-						<a href="{{ url('ceo') }}">CEO Message</a>
-						<a href="{{ url('events') }}">Events</a>
-						<a href="{{ url('inspiration') }}">Inspiration</a>
-						<a href="{{ url('environment') }}" class="last">Environment</a>
+						<a href="{{ url('about') }}" class="first">{{ __('About Honda') }}</a>
+						<a href="{{ url('ceo') }}">{{ __('CEO Message') }}</a>
+						<a href="{{ url('events') }}">{{ __('Events') }}</a>
+						<a href="{{ url('inspiration') }}">{{ __('Inspiration') }}</a>
+						<a href="{{ url('environment') }}" class="last">{{ __('Environment') }}</a>
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_fs">
-						<a href="{{ url('fivestars') }}" class="first">Warranty</a>
-						<a href="{{ url('trade-in') }}">Trade In</a>
-						<a href="{{ url('maintenance') }}">Maintenance</a>
-						<a href="{{ url('test-drive') }}">Test Drive</a>
-						<a href="{{ url('fivestars') }}" class="last">Insurance</a>
+						<a href="{{ url('fivestars') }}" class="first">{{ __('Warranty') }}</a>
+						<a href="{{ url('trade-in') }}">{{ __('Trade In') }}</a>
+						<a href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
+						<a href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
+						<a href="{{ url('fivestars') }}" class="last">{{ __('Insurance') }}</a>
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_fd">
-						<a href="{{ url('find-cars-dealer') }}" class="first">Cars</a>
-						<a href="{{ url('find-motocycles-dealer') }}" class="last">Motorcycles</a>
+						<a href="{{ url('find-cars-dealer') }}" class="first">{{ __('Cars') }}</a>
+						<a href="{{ url('find-motocycles-dealer') }}" class="last">{{ __('Motorcycles') }}</a>
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_mb">
-						<a href="{{ url('maintenance') }}" class="first">Maintenance Booking</a>
-						<a href="{{ url('recall') }}" class="last">Recall</a>
+						<a href="{{ url('maintenance') }}" class="first">{{ __('Maintenance Booking') }}</a>
+						<a href="{{ url('recall') }}" class="last">{{ __('Recall') }}</a>
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_contact">
-						<a href="{{ url('locations') }}" class="first">Honda Locations</a>
+						<a href="{{ url('locations') }}" class="first">{{ __('Honda Locations') }}</a>
 						<!-- <a href="Social/">Social Network</a> -->
-						<a href="{{ url('contact/send') }}" class="last">Send an E-mail</a>
+						<a href="{{ url('contact/send') }}" class="last">{{ __('Send an E-mail') }}</a>
 					</div>
                     <div class="mQuery sub_menu_box" id="sub_cars" style="width: 442px; display: none; left: 57px;">
                         @foreach($cars as $car)
