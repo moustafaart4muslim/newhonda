@@ -50,7 +50,7 @@
 				</li>
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Motorcycles
+						{{ __('Motorcycles') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach($motors as $motor)
@@ -78,7 +78,7 @@
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ __('Find a dealer') }}Find a dealer
+					{{ __('Find a dealer') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url('find-cars-dealer') }}">{{ __('Cars') }}</a>
@@ -88,7 +88,7 @@
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ __('Honda owners') }}
+					{{ __('Honda Owners') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintainence') }}</a>

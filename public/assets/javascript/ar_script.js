@@ -106,7 +106,7 @@ function HondaHomePage() {
 	$('#main_slider').HondaSlider({'caption':true});
 	$('.five_stars_block').hover(function(){
 		if( $(this).find('.five_stars_block_overlay').length == 0) {
-			var servName = $(this).attr('id');
+			var servName = $(this).attr('data-serv');
 			$(this).append('<div class="five_stars_block_overlay">اقرأ المزيد<br />عن '+ servName +'<br />من هوندا</div>');
 			$(this).find('.five_stars_block_overlay').stop(true, true).fadeIn()
 			$(this).find('.five_stars_block_logo').stop(true, true).transition({ scale: 1.3 });

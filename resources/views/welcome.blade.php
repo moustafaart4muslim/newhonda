@@ -7,7 +7,7 @@
 
 @endsection
 
-@section('title') Home @endsection
+@section('title') {{__('Home')}} @endsection
 
 @section('content')
 
@@ -33,7 +33,7 @@
 				<div class="sQuery caption_set">
 					<div class="read_more_block">
 						<div class="read_more_title">
-							<span>{{ __('read more') }}</span>
+							<span>{{ __('Read More') }}</span>
 						  <div class="read_more_arrow"></div>
 						</div>
 					</div>
@@ -67,23 +67,23 @@
 					<div class="five_stars_arrow"></div>
 				</div>
 
-				<div class="five_stars_block warranty start" id="warranty" data-serv="{{ __('warranty') }}" data-title="193" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block warranty start" id="warranty" data-serv="{{ __('Warranty') }}" data-title="193" onclick="window.open('fivestars/','_self')">
 				  <div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block trade_in" id="trade-in" data-serv="{{ __('trade-in') }}" data-title="347" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block trade_in" id="trade-in" data-serv="{{ __('Trade In') }}" data-title="347" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block maintenancee" id="maintenancee" data-serv="{{ __('maintenancee') }}" data-title="501" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block maintenancee" id="maintenancee" data-serv="{{ __('Maintenance') }}" data-title="501" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block test_drive" id="test_drive" data-serv="{{ __('test drive') }}" data-title="655" onclick="window.open('fivestars/','_self')">
+				<div class="five_stars_block test_drive" id="test_drive" data-serv="{{ __('Test Drive') }}" data-title="655" onclick="window.open('fivestars/','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
-				<div class="five_stars_block insurance" id="insurance" data-serv="{{ __('insurance') }}" data-title="809" onclick="window.open('fivestars','_self')">
+				<div class="five_stars_block insurance" id="insurance" data-serv="{{ __('Insurance') }}" data-title="809" onclick="window.open('fivestars','_self')">
 					<div class="five_stars_block_logo"></div>
 				</div>
 
@@ -100,7 +100,7 @@
 				<div class="five_stars_block_responsive  col-12 col-sm-6 warranty start"  data-title="193" onclick="window.open('FiveStars/','_self')">
 				  <div class="five_stars_block_logo_responsive">
 					  <div class="five_stars_text m-auto">
-						<h2>Honda warranty</h2>
+						<h2>Honda {{ __('warranty') }}</h2>
 						<a href='{{ url("warranty") }}'>{{__('Read More')}}</a>
   
 					  </div>
@@ -110,8 +110,8 @@
 				<div class="five_stars_block_responsive col-12 col-sm-6 trade_in"   data-title="347" onclick="window.open('FiveStars/','_self')">
 					<div class="five_stars_block_logo_responsive">
 						<div class="five_stars_text m-auto">
-							<h2>Trade-in</h2>
-							<a href='{{ url("trade-in") }}'>Read More</a>
+							<h2>{{ __('Trade In') }}</h2>
+							<a href='{{ url("trade-in") }}'>{{ __('Read More') }}</a>
 	  
 						  </div>
 	
@@ -122,8 +122,8 @@
 					<div class="five_stars_block_logo_responsive">
 
 						<div class="five_stars_text m-auto">
-							<h2>Maintenance</h2>
-							<a href='{{ url("maintenance") }}'>Read More</a>
+							<h2>{{ __('Maintenance') }}</h2>
+							<a href='{{ url("maintenance") }}'>{{ __('Read More') }}</a>
 	  
 						  </div>
 	  					</div>
@@ -133,8 +133,8 @@
 					<div class="five_stars_block_logo_responsive">
 
 						<div class="five_stars_text m-auto">
-							<h2>Test Drive</h2>
-							<a href='{{ url("test-drive") }}'>Read More</a>
+							<h2>{{ __('Test Drive') }}</h2>
+							<a href='{{ url("test-drive") }}'>{{ __('Read More') }}</a>
 	  
 						  </div>
 	
@@ -146,8 +146,8 @@
 					<div class="five_stars_block_logo_responsive">
 
 						<div class="five_stars_text m-auto">
-							<h2>Insurance</h2>
-							<a href='{{ url("fivestars") }}'>Read More</a>	  
+							<h2>{{ __('Insurance') }}</h2>
+							<a href='{{ url("fivestars") }}'>{{ __('Read More') }}</a>	  
                         </div>
 	
 
