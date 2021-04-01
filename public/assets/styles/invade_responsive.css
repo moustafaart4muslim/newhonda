@@ -958,3 +958,10 @@ body {
 .ar #home .five_stars_title{
   position: unset;
 }
+.ar .footer_grid{
+  margin-right: 0px;
+}
+
+.ar .footer_stalk_block a {
+  text-indent: 9999px;
+}
