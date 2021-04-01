@@ -5,6 +5,9 @@
   .ar body,.ar .container,.ar *{
     direction:rtl;
   }
+  .sub_menu,.menu_set,.menu_set *{
+    direction:ltr;
+  }
   .ar .logo_set,.ar .menu ul li {
     float: right;
   }
