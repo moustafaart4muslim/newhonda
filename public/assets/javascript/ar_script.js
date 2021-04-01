@@ -1030,6 +1030,22 @@ function HondaFiveStars(){
 	*/
 }
 
+function ResponsiveColors(){
+	// $('#t_flight1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('#responsive_colors').find('.ins_dis').each(function(i) {
+		setTimeout(function() {
+			$('#responsive_colors').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
+		}, 150 * (i + 1))
+	});
+}
+function ResponsiveNav(){
+	// $('#t_flight1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('#responvsive_nav').find('.ins_dis').each(function(i) {
+		setTimeout(function() {
+			$('#responvsive_nav').find('.ins_dis').eq(i).animate({opacity:1 }, 600, 'easeInOutCubic')
+		}, 150 * (i + 1))
+	});
+}
 
 function footerAnimate(){
 	var FB = $('#Likes');

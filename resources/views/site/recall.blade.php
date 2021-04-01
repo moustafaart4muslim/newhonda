@@ -2,7 +2,6 @@
 @section('jquery')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
 @endsection
 
 @section('title') Honda Egypt Recall @endsection

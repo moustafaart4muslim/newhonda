@@ -6,7 +6,6 @@
 @endsection
 @section('title') Contact us @endsection
 
-
 @section('content')
 
 <div class="wrapper container" id="about">

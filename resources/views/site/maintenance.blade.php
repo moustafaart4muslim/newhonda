@@ -9,6 +9,7 @@
 
 @section('content')
 
+
 <div class="wrapper container" id="about">
 		<section class="title_box_set">
 			<div class="title_box_border full"></div>

@@ -13,10 +13,12 @@
 		<section class="title_box_set">
 			<div class="title_box_border full"></div>
 			<div class="box_set box_white box_center"><div class="box_icon box_trade_in"></div></div>
-			<div class="box_title">Trade in Your Car</div>
+			<div class="box_title">{{__('Trade in Your Car')}}</div>
 		</section>
-		<div class="responsive_title_box">Trade in Your Car</div>
+		<div class="responsive_title_box">{{ __('Trade in Your Car') }}</div>
 
+
+		
 	<section class="under_box">
 		<div class="form_wrap" id="long" style="min-height: 450px;">
 		@if(Session::has('message'))
@@ -33,7 +35,20 @@
 					
 				</div>
 			@endif
-			<div class="form_title">In case if you have any question, comment, complaint or even if  you would like to share your opinion, don’t hesitate to let us know.</div>
+			<div class="form_title">
+			
+			@if(resolve('lang') == 'en')
+				In case if you have any question, comment, complaint or even if  you would like to share your opinion, don’t hesitate to let us know.
+			@else
+				هل تمتلك سيارة هوندا قديمة و تريد بيعها أو استبدالها بأحد موديلات هوندا الجديدة؟<br>
+	فقط قم بتسجيل بياناتك و سيقوم احد مندوبي قسم الاستبدال بالاتصال بك.
+
+
+			@endif
+
+			
+			
+			</div>
 
 			<div class="form_set" style="overflow: visible;">
 
@@ -41,32 +56,32 @@
 			<form action="{{ url('trade-in') }}" id="email_form" method="post">
 				@csrf
 				<div class="form_block">
-							<div class="form_label">Name</div>
-							<div class="form_input"><input type="text" name="name" class="re" placeholder="Name" autocomplete="off" /></div>
+							<div class="form_label">{{ __('Name') }}</div>
+							<div class="form_input"><input type="text" name="name" class="re" placeholder="{{ __('Name') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">Phone</div>
-							<div class="form_input"><input type="text" name="phone" placeholder="Phone" autocomplete="off" /></div>
+							<div class="form_label">{{ __('Phone') }}</div>
+							<div class="form_input"><input type="text" name="phone" placeholder="{{ __('Phone') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">E-mail</div>
-							<div class="form_input"><input type="text" name="email" class="re" placeholder="E-mail Address" autocomplete="off" /></div>
+							<div class="form_label">{{ __('E-mail') }}</div>
+							<div class="form_input"><input type="text" name="{{ __('email') }}" class="re" placeholder="E-mail Address" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">Your Car</div>
-							<div class="form_input"><input type="text" name="car" class="re" placeholder="Your Car" autocomplete="off" /></div>
+							<div class="form_label">{{ __('Your Car') }}</div>
+							<div class="form_input"><input type="text" name="car" class="re" placeholder="{{ __('Your Car') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">Car Model</div>
-							<div class="form_input"><input type="text" name="car_model" class="re" placeholder="Model of your car" autocomplete="off" /></div>
+							<div class="form_label">{{ __('Car Model') }}</div>
+							<div class="form_input"><input type="text" name="car_model" class="re" placeholder="{{ __('Model of your car') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">Interested</div>
+							<div class="form_label">{{ __('Interested') }}</div>
 							<div class="form_input select re" id="select" data-title="interested">
 								<div class="select_arrow"></div>
 								<div class="select_current">....</div>
@@ -84,15 +99,15 @@
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">Comments</div>
+							<div class="form_label">{{ __('Comments') }}</div>
 							<div class="form_input textarea">
 								<div class="txtare_brdr"></div>
-								<textarea name="comments" placeholder="Comments.." ></textarea>
+								<textarea name="comments" placeholder="{{ __('Comments..') }}" ></textarea>
 							</div>
 						</div>
 						<div class="submit_set">
 							<div class="submit_btn" id="submit">
-								<div class="submit_btn_label">Submit</div>
+								<div class="submit_btn_label">{{ __('Submit') }}</div>
 								<div class="submit_btn_icon"></div>
 							</div>
 						</div>
