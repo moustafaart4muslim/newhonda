@@ -884,8 +884,8 @@ body {
 }
 
 .car_header_fx.container{
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%); */
 
 }
 .car_wheel{
@@ -930,7 +930,9 @@ body {
   /* display: block; */
 }
 
-
+#Specifications{
+  padding: 15px;
+}
 
 
 
@@ -948,9 +950,9 @@ body {
   float: left;
 }
 
-.ar .menu ul li{
+/* .ar .menu ul li{
     
-}
+} */
 .ar .sub_menu_item a{
   float: right;
 }
@@ -964,4 +966,35 @@ body {
 
 .ar .footer_stalk_block a {
   text-indent: 9999px;
+}
+
+.ar .specific_header, .ar .specific_table_set {
+  width: 100%;
+}
+
+.ar .td_main,.ar .grade_head  {
+  text-align: right;
+  padding-right: 5px;;
+  margin-right: -1px !important;;
+}
+
+/* .ar .specific_table_set .th_column {
+ padding-right: 22px;;
+}
+ */
+.ar .td_main {
+  border-left:1px solid #CCC;
+}
+.ar .tr_set .td:nth-child(3){
+  border-left:0;
+  border-right:1px solid #CCC;
+
+}
+.ar .tr_set.row{
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+.ar .specific_table_set .td{
+  margin-right: 0px;
 }

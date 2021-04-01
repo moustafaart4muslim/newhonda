@@ -55,7 +55,7 @@
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/jquery.uncachedimg.js')}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/jquery.HondaSlider.js')}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/' . resolve('lang') . '_functions.js?v=' . config('app.version') )}}"></script>
-	<script type="text/javascript" src="{{ asset( 'assets/javascript/script.js?v='  . config('app.version'))}}"></script>
+	<script type="text/javascript" src="{{ asset( 'assets/javascript/' . resolve('lang') . '_script.js?v='  . config('app.version'))}}"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/javascript/responsive_scripts.js?v='  . config('app.version') )}}"></script>
     <script>
     $("#toggle_menu").click(function() {

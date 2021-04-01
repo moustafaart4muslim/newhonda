@@ -107,17 +107,7 @@ function HondaHomePage() {
 	$('.five_stars_block').hover(function(){
 		if( $(this).find('.five_stars_block_overlay').length == 0) {
 			var servName = $(this).attr('id');
-			if(window.lang == 'en'){
-
-				more = 'read more';
-				about = ' about honda ';
-			}else{
-				more = 'اقرأ المزيد';
-				about = ' عن ';
-	
-			}
-
-			$(this).append('<div class="five_stars_block_overlay">' + more + '<br />' + about + '<br />'+ servName +'</div>');
+			$(this).append('<div class="five_stars_block_overlay">اقرأ المزيد<br />عن '+ servName +'<br />من هوندا</div>');
 			$(this).find('.five_stars_block_overlay').stop(true, true).fadeIn()
 			$(this).find('.five_stars_block_logo').stop(true, true).transition({ scale: 1.3 });
 		}
@@ -128,58 +118,44 @@ function HondaHomePage() {
 		});
 	})
 };
-
 function HondaHomePageFunc(){
 	$('#footer').HondaScrollAnimate('footerAnimate');
 	$('#fsTitle').HondaScrollAnimate('fvstarsTitleAnimate');
-	$('#warranty').HondaScrollAnimate('fvstarsAnimate');
+	$('.start').HondaScrollAnimate('fvstarsAnimate');
 	$('#home_responsive').HondaScrollAnimate('home_responsive');
 	$('#MB').HondaScrollAnimate('mbAnimate');
 }
 
 function fvstarsTitleAnimate(){
 	$('.five_stars_year').animate({top:0}, function(){
-		$('.five_stars_title').animate({left:0,opacity:1}, function(){
-			$('.five_stars_details').animate({left:0,opacity:1});
-		});
-	});
-}
-
-function mbAnimate(){
-	$('.mb_title').animate({left:0,opacity:1}, function(){
-		$('.mb_decs').animate({left:0,opacity:1}, function(){
-			$('.mb_box').animate({opacity:1, top:0});
+		$('.five_stars_title').animate({right:0,opacity:1}, function(){
+			$('.five_stars_details').animate({right:0,opacity:1});
 		});
 	});
 }
 
 function fvstarsAnimate(){
 	$('.five_stars_logo').animate({opacity:1}).transition({ rotate: '0deg' });
-	if(window.lang == 'eg'){
-		$('.five_stars_block').each(function(i) {
-			var pos = $(this).attr('data-title');
-			setTimeout(function() {
-				$('.five_stars_block:eq('+i+')').animate({left:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
-				$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
-				});
-			}, 100 * (i + 1))
-		});
-	
-	}else{
-		$('.five_stars_block').each(function(i) {
-			var pos = $(this).attr('data-title');
-			setTimeout(function() {
-				$('.five_stars_block:eq('+i+')').animate({right:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
-				$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
-				});
-			}, 100 * (i + 1))
-		});
-	
-	}
+	$('.five_stars_block').each(function(i) {
+		var pos = $(this).attr('data-title');
+		setTimeout(function() {
+			$('.five_stars_block:eq('+i+')').animate({right:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
+			$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
+			});
+		}, 100 * (i + 1))
+	});
 }
+
+function mbAnimate(){
+	$('.mb_title').animate({right:0,opacity:1}, function(){
+		$('.mb_box').animate({opacity:1, top:0});
+	});
+}
+
+
 function HondaBox(doAfterfunc){
 	doAfter = window[doAfterfunc];
-	$('.box_set').animate({left:0}, 600, 'easeInOutCubic', function(){
+	$('.box_set').animate({right:0}, 600, 'easeInOutCubic', function(){
 		$('.box_set, .box_title').animate({top:0}, 600, 'easeInOutCubic');
 		doAfter();
 	});
@@ -197,7 +173,7 @@ function HondaAboutusFunc(){
 	HondaBox('HondaAboutusDoAfterBox')
 }
 function HondaAboutusDoAfterBox(){
-	$('.paragraph_set').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('.paragraph_set').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
 	$('.box_about').delay(600).animate({left:0}, 600, 'easeInOutCubic', function(){
 		$(this).transition({ rotate: '0deg' });
 	})
@@ -217,7 +193,7 @@ function HondaCEODoAfterBox(){
 	})
 	$('.ceo_set').each(function(i) {
 		setTimeout(function() {
-			$('.ceo_set').find('.ceo_img').eq(i).stop().animate({left:0});
+			$('.ceo_set').find('.ceo_img').eq(i).stop().animate({right:0});
 			$('.ceo_set').find('.ceo_msg_set').eq(i).stop().animate({opacity:1}, 1000);
 		}, 350 * (i + 1))
 	});
@@ -240,55 +216,26 @@ function HondaInspirationDoAfterBox(){
 			$('.mask_rem').remove()
 		})
 	});
-	$('#ins1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
-	$('.ins2').find('.ins_dis').each(function(i) {
+	$('#ins1').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
+	$('#ins2').find('.ins_dis').each(function(i) {
 		setTimeout(function() {
-			$('.ins2').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
-		}, 150 * (i + 1))
-	});
-		// $('.under_box').find('.ins2').each(function(i) {
-		// 	setTimeout(function() {
-		// 		$(this).find('.ins_dis').each(function(x) {
-		// 			setTimeout(function() {
-		// 				$(this).find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
-		// 			}, 150 * (x + 1))
-		// 		});
-		// 	}, 150 * (i + 1))
-		// });
-
-
-
-}
-function ResponsiveColors(){
-	// $('#t_flight1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
-	$('#responsive_colors').find('.ins_dis').each(function(i) {
-		setTimeout(function() {
-			$('#responsive_colors').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
+			$('#ins2').find('.ins_dis').eq(i).animate({opacity:1, right:0}, 600, 'easeInOutCubic')
 		}, 150 * (i + 1))
 	});
 }
-function ResponsiveNav(){
-	// $('#t_flight1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
-	$('#responvsive_nav').find('.ins_dis').each(function(i) {
-		setTimeout(function() {
-			$('#responvsive_nav').find('.ins_dis').eq(i).animate({opacity:1 }, 600, 'easeInOutCubic')
-		}, 150 * (i + 1))
-	});
-}
-
 function t_flight1(){
-	$('#t_flight1').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('#t_flight1').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
 	$('#ins3').find('.ins_dis').each(function(i) {
 		setTimeout(function() {
-			$('#ins3').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
+			$('#ins3').find('.ins_dis').eq(i).animate({opacity:1, right:0}, 600, 'easeInOutCubic')
 		}, 150 * (i + 1))
 	});
 }
 function t_flight2(){
-	$('#t_flight2').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('#t_flight2').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
 	$('#ins4').find('.ins_dis').each(function(i) {
 		setTimeout(function() {
-			$('#ins4').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
+			$('#ins4').find('.ins_dis').eq(i).animate({opacity:1, right:0}, 600, 'easeInOutCubic')
 		}, 150 * (i + 1))
 	});
 }
@@ -311,7 +258,7 @@ function HondaEnvironmentDoAfterBox(){
 			$('.box_environment_fl').fadeIn("fast").transition({ rotate: '0deg' });
 	})
 
-	$('.blue_skies_logo').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
+	$('.blue_skies_logo').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
 	$('.blue_skies_data').animate({top:0, opacity:1}, 1000, 'easeInOutBack', function(){
 		$('.single_video_set').animate({left:0, opacity:1}, 600, 'easeInOutCubic')
 	});
@@ -320,7 +267,7 @@ function GreenFunc(){
 	$('.green_c_logo').animate({opacity:1}).transition({ rotate: '0deg' });
 	$('.green_dis').each(function(i) {
 		setTimeout(function() {
-			$('.green_dis').eq(i).stop().animate({opacity:1, left:0})
+			$('.green_dis').eq(i).stop().animate({opacity:1, right:0})
 		}, 150 * (i + 1))
 		if(i == 2) {
 			$('.green_c_star').each(function(i) {
@@ -332,6 +279,7 @@ function GreenFunc(){
 	});
 }
 
+
 function HondaEvents(){
 	WaitFun('HondaEventsFunc')
 }
@@ -340,7 +288,7 @@ function HondaEventsFunc(){
 	HondaBox('HondaEventsDoAfterBox')
 }
 function HondaEventsDoAfterBox(){
-	$('.box_inspiration').delay(600).animate({left: 0, opacity:1}, 1000, 'easeInOutBack', function(){
+	$('.box_inspiration').delay(600).animate({right: 0, opacity:1}, 1000, 'easeInOutBack', function(){
 		$('.box_inspiration_mask_2').animate({left:-65, top:81, opacity:0})
 		$('.box_inspiration_mask_1').animate({left:-60, opacity:0}, function(){
 			$('.mask_rem').remove()
@@ -348,7 +296,7 @@ function HondaEventsDoAfterBox(){
 	});
 	$('#ev').find('.ins_dis').each(function(i) {
 		setTimeout(function() {
-			$('#ev').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
+			$('#ev').find('.ins_dis').eq(i).animate({opacity:1, right:0}, 600, 'easeInOutCubic')
 		}, 150 * (i + 1))
 	});
 }
@@ -364,7 +312,6 @@ function HondaAboutLogoSet() {
 	$('.ve_logo').css({'top':-logo_h});
 }
 
-
 function rotation(){
 	if(!$(".car_wheel").hasClass('stop')) {
 		$(".car_wheel").rotate({
@@ -379,16 +326,11 @@ function rotation(){
 }
 
 function HondaSubmenu() {
-	var menu_pos = $('.menu_set').position().left;
-	var sub_logo = $('.sub_logo').width();
-	var sub_menu_pos = menu_pos - sub_logo;
+	var menu_wd = $('.menu_set').width();
 
-	$('#sub_menu_adj').css({"margin-left":sub_menu_pos});
+	$('#sub_menu_adj').css({width:menu_wd});
 	$('.sub_menu_box_element:first-child').addClass('first');
 	$('.sub_menu_box_element:last-child').addClass('last');
-	//$('.sub_logo').click(function(e) {
-		//$('html,body').animate({scrollTop:0}, 600,'easeInOutCubic');
-    //});
 }
 
 function HondaVideos() {
@@ -397,7 +339,7 @@ function HondaVideos() {
 		if (!$(this).hasClass('active')){
 			var image = $(this).attr('data-title'),
 				id = $(this).attr('data-id'),
-				src = image ;
+				src = '../structure/gallery/videos/full/' + image +'.png';
 	
 			if (src) {
 				$('.con_videos_thumb').removeClass('active')
@@ -445,14 +387,6 @@ function ConVideoTitleAnimate() {
 	})
 }
 
-function HondaResponsiveGallery(){
-	$('#ins2').find('.ins_dis').each(function(i) {
-		setTimeout(function() {
-			$('#ins2').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
-		}, 150 * (i + 1))
-	});
-
-}
 function HondaCar() {
 	//$(window).resize(function(){location.reload();});
 	WaitFun('HondaCarFunc')
@@ -460,7 +394,6 @@ function HondaCar() {
 	HondaVideos();
 	HondaCarColors();
 	HondaFooter()
-	HondaResponsiveGallery()
 	$('#main_slider').HondaSlider();
 
 	var win_width = $(window).width(),
@@ -544,7 +477,7 @@ function vthumb(){
 	$('.con_videos_thumb:first-child').addClass('active');
 	$('.con_videos_thumb').each(function(i) {
 		var image = $(this).attr('data-title'),
-			src = 'structure/gallery/videos/230x95/' + image +'.png';
+			src = '../structure/gallery/videos/230x95/' + image +'.png';
 
 		if (src && $(this).children('img').length == 0) {
 			$('.con_video_thumb').children('img').animate({opacity:1});
@@ -562,7 +495,7 @@ function carGo(){
 	if ( !$('.car_adj').is(":animated") && !$(this).hasClass('view')) {
 		$('.color_button').each(function(i) {
 			setTimeout(function() {
-				$('.color_button').eq(i).stop().animate({opacity:0.8},2000);
+				$('.color_button').eq(i).stop().animate({opacity:1},2000);
 			}, 150 * (i + 1))
 		});
 		$( ".car_adj" ).animate({left: 0}, {
@@ -610,13 +543,13 @@ function HondaCarColors(){
 	$('.color_button').click(function(e) {
 		if ( !$('.car_adj').is(":animated") && !$(this).hasClass('view')) {
 			var car = $(this).attr("data-car");
-			var src =  car ;
+			var src = '../structure/cars/colors/src/' + car +'.png';
 	
 			$('.color_button').removeClass('view').stop().animate({opacity:1});
 			$(this).addClass('view');
 			$(".car_wheel").removeClass("stop");
 			$(".car_wheel").removeClass("stopped");
-	
+
 			$( ".car_adj" ).animate({left: -ani}, {
 				duration: 1500,
 				start: function() {
@@ -637,25 +570,16 @@ function HondaCarColors(){
 							$('.car_adj').animate({left:0}, {
 								duration: 1500,
 								progress: function() {
-									if($('.car_adj').position().left < 50){
+									if($('.car_adj').position().left < 500){
 										$(".car_wheel").addClass("stop");
 										if(!$('.car').hasClass('stop')) {
 											$('.car').addClass('stop').transition({ rotate: '-1deg'})
 										}
 									}
-									
-									if($('.car_adj').position().left < 300){
+									if($('.car_adj').position().left < 1){
 										$(".car_wheel").addClass("stopped");
 									}
-									
-									// if($('.car_adj').position().left < 500){
-									// 	$(".car_wheel").addClass("stop");
-									// 	if(!$('.car').hasClass('stop')) {
-									// 		$('.car').addClass('stop').transition({ rotate: '-1deg'})
-									// 	}
-									// }
-									
-									
+
 								},
 								 complete: function() {
 									$('.car').transition({ rotate: '0deg'})
@@ -669,7 +593,6 @@ function HondaCarColors(){
 	});
 
 };
-
 
 function HondaEcon(){
 	HondafxMenu();
@@ -740,16 +663,16 @@ function HondaMotors() {
 	$('.content').HondaScrollAnimate('GalleryAnimate');
 	$('.con_videos').HondaScrollAnimate('ConVideoTitleAnimate');
 	$('.title_box_set').HondaScrollAnimate('SpecificationsAnimate');
-	// $(".portfolioListing").quicksandpaginated({
-	// 	callback:function() { 
-	// 		$("a[rel^='lightbox-gallery']").slimbox()
-	// 		$('.portfolioListing').HondaGallery()
-	// 	}
-	// });
+	$(".portfolioListing").quicksandpaginated({
+		callback:function() { 
+			$("a[rel^='lightbox-gallery']").slimbox()
+			$('.portfolioListing').HondaGallery()
+		}
+	});
 	WaitFun('HondaMotorsFunc')
 }
 function HondaMotorsFunc(){
-	SpecificationsAnimate();
+	
 }
 
 function SpecificationsAnimate(){
@@ -806,7 +729,6 @@ function HondaMaintenance(){
 	$('#email_form').HondaForm();
 	$('#select').HondaSelect({'submenu':true});
 	$('#Model').HondaSelect();
-	$('#center').HondaSelect();
 	WaitFun('HondaMaintenanceFunc');
 }
 function HondaMaintenanceFunc(){
@@ -828,6 +750,7 @@ function HondaRecall(){
 	$('#year').HondaSelect();
 	WaitFun('HondaSendEmailFunc');
 }
+
 
 function HondaTestDrive(){
 	HondaFooter();
@@ -858,16 +781,15 @@ function HondaSendEmailDoAfterBox(){
 		$(this).transition({ rotate: '0deg' });
 	})
 	FormShow();
-
 }
 
 function HondaSocial(){
 	HondaFooter();
 	WaitFun('HondaSocialFunc')
 	$('.social_block').hover(function(e) {
-        $(this).stop().animate({left:30}, 400, 'easeInOutCubic');
+        $(this).stop().animate({right:30}, 400, 'easeInOutCubic');
     },function(e) {
-        $(this).stop().animate({left:0}, 600, 'easeOutBounce');
+        $(this).stop().animate({right:0}, 600, 'easeOutBounce');
     });
 }
 function HondaSocialFunc(){
@@ -881,7 +803,7 @@ function HondaSocialDoAfterBox(){
 	$('.form_title').animate({opacity:1, top:0},function(i) {
 		$('.social_block').each(function(i) {
 			setTimeout(function() {
-				$('.social_block:eq('+i+')').animate({opacity:1, left:0});
+				$('.social_block:eq('+i+')').animate({opacity:1, right:0});
 			}, 150 * (i + 1))
 		});
 	});
@@ -899,8 +821,8 @@ function HondaLocations(){
 		loc_city = location.find(".location_city").html(),
 		loc_addr = location.find(".location_address").html(),
 		inf_top = parseInt(location.attr("data-top")) - 43,
-		inf_left = parseInt(location.attr("data-left")) + 62,
-		src = 'structure/maps/locations/' + map_scr +'.png';
+		inf_left = parseInt(location.attr("data-left")) - 493,
+		src = '../structure/maps/locations/' + map_scr +'.png';
 
 		if (src) {
 			var img = new Image();
@@ -913,7 +835,7 @@ function HondaLocations(){
 			$(".location_map_city").html(loc_city);
 			$(".location_map_address").html(loc_addr);
 		
-			$('.location_map').stop().animate({opacity:0}, function(){
+			$('.location_map').stop().animate({opacity:0.3}, function(){
 				$('.location_map_loader').stop().fadeIn()
 			});
 		
@@ -926,17 +848,17 @@ function HondaLocations(){
 			};
 		}
 
-	// $('.locations_animate').css({'width':new_ani_width});
+	$('.locations_animate').css({'width':new_ani_width});
 	$('.locations_pagi_set').css({'width':new_pagi_width-10});
 	$('.locations_pagi:first-child').addClass('active')
-	$('.locations_panel').find('.location:nth-child(2n), .location:nth-child(4n)').css({'float':'rights'});
+	$('.locations_panel').find('.location:nth-child(2n), .location:nth-child(4n)').css({'float':'left'});
 
 	$('.location').hover(function(){
 		if(!$(this).hasClass('active')){
 			$('.location#active').removeClass('active');
 		}
 	}, function(){
-		// $('.location#active').addClass('active');
+		$('.location#active').addClass('active');
 	})
 
 	$('.map_locate_icon').click(function(){
@@ -950,8 +872,8 @@ function HondaLocations(){
 	$('.location_map_info_toggle').click(function(){
 		$('.location_map_info').fadeOut()
 	})
-	/*
-	$('.locationff').click(function() {
+
+	$('.location').click(function() {
 		if(!$(this).hasClass('active') && !$('div').is(":animated")  && !$('.location_map_loader').is(":visible")){
 			var map_scr = $(this).attr("data-map"),
 				inf_cur_pos = $('.location_map_info').position().left,
@@ -963,9 +885,9 @@ function HondaLocations(){
 				loc_addr = $(this).find(".location_address").html(),
 
 				inf_top = parseInt($(this).attr("data-top")) - 43,
-				inf_left = parseInt($(this).attr("data-left")) + 62,
+				inf_left = parseInt($(this).attr("data-left")) - 493,
 				
-				src = 'structure/maps/locations/' + map_scr +'.png',
+				src = '../structure/maps/locations/' + map_scr +'.png',
 				scroll_pos = $('#footer').offset().top,
 				win_h = $(window).height();
 			
@@ -999,7 +921,7 @@ function HondaLocations(){
 
 		}
 	})
-	*/
+	
 	$('.locations_pagi').click(function(e) {
 		if(!$(this).hasClass('active') && !$('div').is(":animated")){
 			var pagi_index = $(this).index(),
@@ -1049,7 +971,7 @@ function HondaLocationsDoAfterBox(){
 	$('.locations_panel').eq(0).find('.location_data').each(function(i) {
 		setTimeout(function() {
 			$('.locations_panel').eq(0).find('.location_icon').eq(i).delay(150 * (i + 1)).animate({opacity:1, top:0});
-			$('.locations_panel').eq(0).find('.location_data').eq(i).animate({opacity:1, left:0});
+			$('.locations_panel').eq(0).find('.location_data').eq(i).animate({opacity:1, right:0});
 		}, 150 * (i + 1))
 	});
 }
@@ -1059,11 +981,10 @@ function FormShow(){
 	var get_length = $('.form_block').length-1;
 	$('.form_title').animate({opacity:1, top:0},function(i) {
 		$('.form_block').each(function(i) {
-
 			setTimeout(function() {
-				$('.form_block:eq('+i+')').animate({opacity:1, left:0});
+				$('.form_block:eq('+i+')').animate({opacity:1, right:0});
 				if(i==get_length) {
-					$('.submit_set').delay(400).animate({opacity:1, left:0});
+					$('.submit_set').delay(400).animate({opacity:1, right:0});
 				}
 			}, 150 * (i + 1))
 		});
@@ -1079,11 +1000,38 @@ function HondaFiveStars(){
 	$('.fs_block').mouseleave(function() {
 		$('.fs_block').removeClass('current');
 	});
+
+	/*
+	$('body').mousewheel(function(event, delta) {
+		if (event.originalEvent.wheelDeltaX !== 0) {
+			event.preventDefault();
+		} 
+		var $current = $('.fs_block.current');
+		if (delta > 0) {
+			$prev = $current.prev();
+	
+			if ($prev.length) {
+				get_of = $prev.offset().top;
+				$('html,body').stop().animate({scrollTop:get_of-274}, 100);
+				$current.removeClass('current');
+				$prev.addClass('current');
+			}
+		} else {
+			$next = $current.next();
+
+			if ($next.length) {
+				get_of = $next.offset().top;
+				$('html,body').stop().animate({scrollTop:get_of-274}, 100);
+				$current.removeClass('current');
+				$next.addClass('current');
+			}
+		}
+	});
+	*/
 }
 
 
 function footerAnimate(){
-	// alert(1);
 	var FB = $('#Likes');
 		FBlikes = FB.attr('data-id'),
 		FBlikesEnd = FB.attr('data-title');
@@ -1126,7 +1074,7 @@ function footerAnimate(){
 }
 
 
-$(document).ready(function () {
+$( document).ready(function () {
 	$(window).bind('beforeunload', function(){
 		if( $('.unload').length == 0 ) {
 			disable_scroll();
@@ -1146,9 +1094,7 @@ $(document).ready(function () {
 		var id = $(this).find('#video_embed').attr('data-id');
 		if( !$(this).find('#video_embed').is(":visible") ) {
 			$(this).find('img').remove();
-			vimeo_iframe = '<iframe src="//player.vimeo.com/video/' + id +
-			 '?title=0&amp;byline=0&amp;portrait=0&amp;color=ed1b2f&amp;autoplay=1" width="100%"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-			$(this).find('#video_embed').html(vimeo_iframe).fadeIn();
+			$(this).find('#video_embed').load('../inc/getVideos.php?id='+ id).fadeIn();
 		}
 	})
 

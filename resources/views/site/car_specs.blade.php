@@ -17,11 +17,11 @@
 			<div class="car_menu" id="sub_menu_adj" style="margin-left: 209.326px;">
 				<ul>
 					<li><a rel="Model_Overview" href="{{ urls('cars',$car->en_name,$car->id) }}" class="move_to " id="selected">Model Overview</a></li>
-					<li><a class="move_to" rel="Gallery" href="{{ urls('cars',$car->en_name,$car->id) }}">Gallery</a></li>
-					<li><a class="move_to" rel="Colors" href="{{ urls('cars',$car->en_name,$car->id) }}">Colors</a></li>
-					<li><a class="move_to" rel="Videos" href="{{ urls('cars',$car->en_name,$car->id) }}">Videos</a></li>
+					<li><a class="move_to" rel="Gallery" href="{{ urls('cars',$car->en_name,$car->id) }}#Gallery">Gallery</a></li>
+					<li><a class="move_to" rel="Colors" href="{{ urls('cars',$car->en_name,$car->id) }}#Colors">Colors</a></li>
+					<li><a class="move_to" rel="Videos" href="{{ urls('cars',$car->en_name,$car->id) }}#Videos">Videos</a></li>
 					<!-- <li><a href="Cars/Civic/Econ">Econ</a></li> -->
-					<li><a href="#" class="selected">Specifications</a></li>
+					<li><a class="selected">Specifications</a></li>
 				</ul>
 			</div>
 
