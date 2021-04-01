@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Category;
 use App\Models\Dealer;
 use App\Models\Event;
 use App\Models\Inspiration;
@@ -11,6 +12,7 @@ use App\Models\MotorCategory;
 use App\Models\Motorcycle;
 use App\Models\MotorDealer;
 use App\Models\Page;
+use App\Models\Specification;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
@@ -210,8 +212,21 @@ class SiteController extends BaseController
         // dd($sub_mod);
         $cols = 8; 
         $this->createSpecsTitles2($motor->specifications , 1);
-        
-    
+
+        if(resolve('lang') == 'en'){
+            $db_name = "en_name";
+        }else{
+            $db_name = "ar_name";
+        }
+        $categories = Category::get()->toArray();
+        foreach($categories as $cat){
+            $cats_trans[$cat['en_name']] = $cat[$db_name];
+        }
+        $specifications = Specification::get()->toArray();
+        foreach($specifications as $sp){
+            $sp_trans[$sp['en_name']] = $sp[$db_name];
+        }
+        // dd($sp_trans);
         // dd($this->specs);
         return \View::make('site.motorcycle')
         ->with('mod',$mod)
@@ -222,6 +237,10 @@ class SiteController extends BaseController
         ->with('gallery',$gallery)
         ->with('specs',$this->specs)
         ->with('cols',$cols)
+        ->with('cats_trans',$cats_trans)
+        ->with('sp_trans',$sp_trans)
+        
+        
         ;  
     }
 
@@ -315,13 +334,28 @@ class SiteController extends BaseController
         // dd($this->specs);
         // $car = Car::with('models')->findOrFail($id);
 
+        if(resolve('lang') == 'en'){
+            $db_name = "en_name";
+        }else{
+            $db_name = "ar_name";
+        }
+        $categories = Category::get()->toArray();
+        foreach($categories as $cat){
+            $cats_trans[$cat['en_name']] = $cat[$db_name];
+        }
+        $specifications = Specification::get()->toArray();
+        foreach($specifications as $sp){
+            $sp_trans[$sp['en_name']] = $sp[$db_name];
+        }
 
         return \View::make('site.car_specs')
         ->with('mod',$mod)
         ->with('car',$car)
         ->with('specs',$this->specs)
         ->with('cols',$cols)
-        
+        ->with('sp_trans',$sp_trans)
+        ->with('cats_trans',$cats_trans)
+     
         ;
         
         

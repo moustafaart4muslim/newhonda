@@ -72,10 +72,10 @@
 
 				@foreach( $specs as $cat=>$arr )
 
-					<div class="th_column">{{$cat}}</div>
+					<div class="th_column">{{$cats_trans[$cat]}}</div>
 					@foreach($arr as $title=>$values)
 						<div class="tr_set row" style="opacity: 0;">
-							<div class="td_main col-4">{{ $title }}</div>
+							<div class="td_main col-4">{{ $sp_trans[$title] }}</div>
 							@foreach($values as $model_id=>$val)
 
 								<div class="td col-{{$cols}}">

@@ -91,7 +91,7 @@
 			<div class="con_title_set title_gray" id="title1">
 				<div class="title_shape dark_shape"></div>
 				<div class="title_arrow dark_arrow"></div>
-				<div class="con_title">{{$motor->$db_name}}<br>Gallery</div>
+				<div class="con_title">{{$motor->$db_name}}<br>{{__('Gallery')}}</div>
 			</div>
 			<div class="main" role="main">
 				<div class="content">
@@ -146,21 +146,21 @@
 				<div class="box_specifications pt1"></div>				
 				<div class="box_specifications pt2"></div>				
 			</div>
-			<div class="box_title">Specifications</div>
+			<div class="box_title">{{__('Specifications')}}</div>
 		</section>
 
 
 		<section class="under_box">
 
 			<div class="specific_title_set">
-				<div class="specific_main_title">{{$motor->$db_name}} Specifications</div>
+				<div class="specific_main_title">{{$motor->$db_name}} {{__('Specifications')}}</div>
 				<div class="specific_sub_title">{{$motor->$db_info}}</div>
 			</div>
 
 
 			<div class="specific_header">
 				<div class="specific_border"></div>
-				<span>Specifications</span>
+				<span>{{__('Specifications')}}</span>
 			</div>
 
 
@@ -169,17 +169,17 @@
 
 				@foreach( $specs as $cat=>$arr )
 
-				<div class="th_column">{{$cat}}</div>
+				<div class="th_column">{{$cats_trans[$cat]}}</div>
 				@foreach($arr as $title=>$values)
 				<div class="tr_set row">
-					<div class="td_main col-4">{{ $title }}</div>
+					<div class="td_main col-4">{{ $sp_trans[$title] }}</div>
 					@foreach($values as $model_id=>$val)
 
 					<div class="td col-{{$cols}}">
 						@if($val == 'true' or $val == 'True' or $val == 'TRUE' or $val === true )
-						<img src="structure/icons/sp_exist.png">
+							<img src="structure/icons/sp_exist.png">
 						@else
-						{{ $val }}
+							{{ $val }}
 
 						@endif
 

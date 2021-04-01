@@ -89,3 +89,7 @@
   .con_videos_set{
     float: right;
   }
+
+  .ar .td_main{
+    direction: ltr;
+  }
