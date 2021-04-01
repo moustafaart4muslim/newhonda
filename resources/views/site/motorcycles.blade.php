@@ -16,7 +16,15 @@
 
 <div class="car_header_fx container">
 	<div class="car_header_set" id="motors_header">
-		<div class="sub_logo motors"><img src="structure/ui/motorcycles_logo.png" width="177" height="20" alt="Honda Motorcycls" />
+		<div class="sub_logo motors">
+			@if(resolve('lang') == 'en')
+				<img src="structure/ui/motorcycles_logo.png" width="177" height="20" alt="Honda Motorcycls" />
+
+			@else
+
+				<img src="structure/ui/motorcycles_logo_ar.png" width="177" height="20" alt="هوندا ، الدراجات البخارية" />
+			@endif
+
 		</div>
 
 		<div class="menu_set" id="sub_menu_adj">

@@ -14,7 +14,19 @@
 
 <div class="car_header_fx container">
 	<div class="car_header_set" id="motors_header">
-		<div class="sub_logo motors"><img src="structure/ui/motorcycles_logo.png" width="177" height="20" alt="Honda Motorcycls" />
+
+
+	
+
+
+		<div class="sub_logo motors">
+			@if(resolve('lang') == 'en')
+				<img src="structure/ui/motorcycles_logo.png" width="177" height="20" alt="Honda Motorcycls" />
+
+			@else
+
+				<img src="structure/ui/motorcycles_logo_ar.png" width="177" height="20" alt="هوندا ، الدراجات البخارية" />
+			@endif
 		</div>
 
 		<div class="menu_set" id="sub_menu_adj">
@@ -22,7 +34,7 @@
 				<ul>
 					@foreach($cats as $cat)
 						<li><a class="for_ani  {{ $sub_mod == $cat->en_name ? 'seected' : '' }}" rel="{{ $cat->en_name }}"
-							 href="javascript:void(0)">{{  $cat->en_name }}</a></li>
+							 href="javascript:void(0)">{{  $cat->$db_name }}</a></li>
 					@endforeach
 				</ul>
 			</div> <!-- Sub Menu End -->

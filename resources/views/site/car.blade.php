@@ -122,7 +122,16 @@
 												<div class="gallery_caption_set">
 													<div class="gallery_caption_arrow"></div>
 													<div class="gallery_caption">
-														Honda {{ $car->$db_name}}	 
+													<?php
+														if(resolve('lang') == 'en' ){
+															$cap = "english_caption";
+
+														}else{
+															$cap = "arabic_caption";
+
+														}
+													?>
+													{{ $item->getCustomProperty($cap)}}	 
 													</div>
 												</div>
 											</a>
@@ -229,7 +238,7 @@
 				@if(resolve('lang') == 'en')
 					check out latest videos of honda {{ $car->$db_name }}, features and news
 				@else
-					شاهد أحدث فيديوهات هوندا سيفيك ، المميزات ، واخر الأخبار
+					شاهد أحدث فيديوهات هوندا  {{ $car->$db_name }} ، المميزات ، واخر الأخبار
 
 
 				@endif
