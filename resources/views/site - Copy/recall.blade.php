@@ -8,15 +8,15 @@
 
 @section('content')
 
-<div class="wrapper container recall_page" id="about">
+<div class="wrapper container" id="about">
 	<section class="title_box_set">
 		<div class="title_box_border"></div>
 		<div class="box_set box_red box_center" style="left: 0px; top: 0px;">
 			<div class="box_icon box_send_email" style="background-image: url(&quot;structure/icons/recall.png&quot;); left: 0px; transform: rotate(0deg);"></div>
 		</div>
-		<div class="box_title" style="top: 0px;">{{ __('Recall') }}</div>
+		<div class="box_title" style="top: 0px;">Recall</div>
 	</section>
-	<div class="responsive_title_box">{{ __('Recall') }}</div>
+	<div class="responsive_title_box">Recall</div>
 
 	<section class="under_box">
 		<div class="form_wrap" id="long" style="min-height: 450px;">
@@ -34,22 +34,7 @@
 					
 				</div>
 			@endif
-			<div class="notice form_title">
-			
-			
-			
-			@if(resolve('lang') == 'en')
-			
-			For more assistance please call our call center on <strong>19811</strong>	
-
-				@else
-
-				لمزيد من المساعدة يرجى الاتصال بمركز الاتصال على <strong>19811</strong>					
-
-
-			@endif
-			
-			</div>
+			<div class="notice form_title">For more assistance please call our call center on <strong>19811</strong></div>
 
 			<div class="form_set" style="overflow: visible;">
 
@@ -64,7 +49,7 @@
 						</div> -->
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Car Model') }}</div>
+							<div class="form_label">Car Model</div>
 							<div class="form_input select re" id="model" data-title="model">
 								<div class="select_arrow"></div>
 								<div class="select_current">....</div>
@@ -92,7 +77,7 @@
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Year') }}</div>
+							<div class="form_label">Year</div>
 							<div class="form_input select re" id="year" data-title="year">
 								<div class="select_arrow"></div>
 								<div class="select_current">....</div>
@@ -155,29 +140,29 @@
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Name') }}</div>
+							<div class="form_label">Name</div>
 							<div class="form_input">
-								<input type="text" name="name" class="re" placeholder="{{ __('Name') }}" />
+								<input type="text" name="name" class="re" placeholder="Your name" />
 							</div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Email') }}</div>
+							<div class="form_label">Email</div>
 							<div class="form_input">
-								<input type="text" name="email" class="re" placeholder="{{ __('Email') }}" />
+								<input type="text" name="email" class="re" placeholder="Your Email" />
 							</div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Phone') }}</div>
+							<div class="form_label">Phone</div>
 							<div class="form_input">
-								<input type="text" name="phone" class="re" placeholder="{{ __('Phone') }}" />
+								<input type="text" name="phone" class="re" placeholder="Your phone number" />
 							</div>
 						</div>
 						
 						<div class="submit_set">
 							<div class="submit_btn" id="submit">
-								<div class="submit_btn_label">{{ __('Send') }}</div>
+								<div class="submit_btn_label">Send</div>
 							</div>
 						</div>
 						<!-- <p class="form_title" style="padding-top: 190px; z-index: -99;">Honda cares about recalling the cars for the safety!</p> -->

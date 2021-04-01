@@ -104,3 +104,9 @@
   .portfolioListing nav ul li{
     float: right !important;
   }
+
+  .recall_page .form_title{
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+  }

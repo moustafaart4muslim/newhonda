@@ -22,9 +22,9 @@
 					<div class="box_maintenance pt4"></div>
 				</div>				
 			</div>
-			<div class="box_title">{{ __('Maintenance Booking') }}</div>
+			<div class="box_title">Maintenance Booking</div>
 		</section>
-		<div class="responsive_title_box">{{ __('Maintenance') }}</div>
+		<div class="responsive_title_box">Maintenance</div>
 
 
 	<section class="under_box">
@@ -43,49 +43,39 @@
 					
 				</div>
 			@endif
-			<div class="form_title">
-			@if(resolve('lang') == 'en')
-			
-			Now you can easily book your maintenance by just filling the below form:
-		
-				@else
-				الآن يمكنك حجز صيانة سيارتك الدورية عن طريق موقعنا الالكتروني. فقط قم بتسجيل بياناتك و سيقوم احد مهندسي هوندا بتأكيد الحجز
+			<div class="form_title">In case if you have any question, comment, complaint or even if  you would like to share your opinion, don’t hesitate to let us know.</div>
 
-
-			@endif
-			
-			</div>
 			<div class="form_set" style="overflow: visible;">
 
 
 			<form action="{{ url('maintenance') }}" id="email_form" method="post">
 				@csrf
 						<div class="form_block">
-							<div class="form_label">{{ __('Name') }}</div>
-							<div class="form_input"><input type="text" name="name" class="re" placeholder="{{ __('Name') }}" autocomplete="off" /></div>
+							<div class="form_label">Name</div>
+							<div class="form_input"><input type="text" name="name" class="re" placeholder="Name" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Phone') }}</div>
-							<div class="form_input"><input type="text" name="phone" placeholder="{{ __('Phone') }}" autocomplete="off" /></div>
+							<div class="form_label">Phone</div>
+							<div class="form_input"><input type="text" name="phone" placeholder="Phone" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('E-mail') }}</div>
-							<div class="form_input"><input type="text" name="email" class="re" placeholder="{{ __('E-mail') }}" autocomplete="off" /></div>
+							<div class="form_label">E-mail</div>
+							<div class="form_input"><input type="text" name="email" class="re" placeholder="E-mail Address" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block blk_small">
-							<div class="form_label">{{ __('Maint. Date') }}</div>
+							<div class="form_label">Maint. Date</div>
 							<div class="form_input">
-								<input type="text" name="dd" class="in_small re" placeholder="{{ __('day') }}" maxlength="2" value="<?php echo date("d"); ?>" autocomplete="off" />
-								<input type="text" name="mm" class="in_small re" placeholder="{{ __('month') }}" maxlength="2" value="<?php echo date("m"); ?>" autocomplete="off" />
-								<input type="text" name="yy" class="in_small re" placeholder="{{ __('year') }}" value="<?php echo date("Y"); ?>" maxlength="4" autocomplete="off" />
+								<input type="text" name="dd" class="in_small re" placeholder="day" maxlength="2" value="<?php echo date("d"); ?>" autocomplete="off" />
+								<input type="text" name="mm" class="in_small re" placeholder="month" maxlength="2" value="<?php echo date("m"); ?>" autocomplete="off" />
+								<input type="text" name="yy" class="in_small re" placeholder="year" value="<?php echo date("Y"); ?>" maxlength="4" autocomplete="off" />
 							</div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Service Center') }}</div>
+							<div class="form_label">Service Center</div>
 							<div class="form_input select re" id="center" data-title="center">
 								<div class="select_arrow"></div>
 								<div class="select_current">....</div>
@@ -93,11 +83,11 @@
 									<div class="select_drop_wrap">
 										<ul class="select_options">
 											<li>....</li>
-											<li>{{ __('New Cairo') }}</li>
-											<li>{{ __('Abu-Rawash') }}</li>
-											<li>{{ __('Obour Branch') }}</li>
-											<li>{{ __('Alexandria') }}</li>
-											<li>{{ __('Mansoura') }}</li>
+											<li>New Cairo</li>
+											<li>Abu-Rawash</li>
+											<li>Obour Branch</li>
+											<li>Alexandria</li>
+											<li>Mansoura</li>
 										</ul>
 									</div>
 								</div>
@@ -105,7 +95,7 @@
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Car') }}</div>
+							<div class="form_label">Car</div>
 							<div class="form_input select re" id="select" data-title="car">
 								<div class="select_arrow"></div>
 								<div class="select_current">....</div>
@@ -125,26 +115,26 @@
 
 						
 						<div class="form_block">
-							<div class="form_label">{{ __('Plate Number') }}</div>
-							<div class="form_input"><input type="text" name="plate" class="re" placeholder="{{ __('Car Plate Number') }}" autocomplete="off" /></div>
+							<div class="form_label">Plate Number</div>
+							<div class="form_input"><input type="text" name="plate" class="re" placeholder="Car Plate Number" autocomplete="off" /></div>
 						</div>
 
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Mileage') }}</div>
-							<div class="form_input"><input type="text" name="mileage" class="re" placeholder="{{ __('Mileage') }}" autocomplete="off" /></div>
+							<div class="form_label">Mileage</div>
+							<div class="form_input"><input type="text" name="mileage" class="re" placeholder="Mileage" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
-							<div class="form_label">{{ __('Comments') }}</div>
+							<div class="form_label">Comments</div>
 							<div class="form_input textarea">
 								<div class="txtare_brdr"></div>
-								<textarea name="comments" placeholder="{{ __('Comments..') }}" ></textarea>
+								<textarea name="comments" placeholder="Comments.." ></textarea>
 							</div>
 						</div>
 						<div class="submit_set">
 							<div class="submit_btn" id="submit">
-								<div class="submit_btn_label">{{ __('Submit') }}</div>
+								<div class="submit_btn_label">Submit</div>
 								<div class="submit_btn_icon"></div>
 							</div>
 						</div>

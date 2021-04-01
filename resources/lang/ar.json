@@ -56,12 +56,25 @@
     "Car" : "السيارة",
     "Notes" : "ملاحظات",
     "Submit" : "إرسال",
-    "About" : "هوندا",
-
-
-    "About" : "هوندا",
-
-
+    "Maint. Date" : "تاريخ الصيانة",
+    "day" : "يوم",
+    "month" : "شهر",
+    "year" : "سنة",
+    "Service Center" : "مركز خدمات",
+    "Abu-Rawash" : "أبو رواش",
+    "New Cairo" : "القاهرة الجديدة",
+    "Obour Branch" : "فرع العبور",
+    "Alexandria" : "الإسكندرية",
+    "Mansoura" : "المنصورة",
+    "Plate Number" : "رقم اللوحة",
+    "Car Plate Number" : "رقم لوحة السيارة",
+    "Mileage" : "عدد الأميال",
+    "Comments" : "التعليقات",
+    "Send an Email" : "إرسال بريد اليكترونى",
+    "Message" : "الرسالة",
+    "Car Model" : "الموديل",
+    "Chassis Number" : "رقم الشاسيه",
+    "All" : "الجميع",
     "Name" : "الاسم"
 
 }
