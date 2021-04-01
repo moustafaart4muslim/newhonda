@@ -62,10 +62,16 @@ class SiteController extends BaseController
     //   dd($slider_images);
         // End Getting home slider
 
+
+        $five_db_name =  resolve('lang') . '_five' ;
+        $fivestars_text = Page::select($five_db_name)->find(1);
+
+
         return \View::make('welcome')
         ->with('is_home',$is_home)
         ->with('mod',$mod)
         ->with('slider_images',$slider_images)
+        ->with('fivestars_text',$fivestars_text[$five_db_name])
         // ->with('first_slide',$first_slide)
         ;
         // {{dd($db_caption)}}

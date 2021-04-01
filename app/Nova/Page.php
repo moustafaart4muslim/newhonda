@@ -62,6 +62,7 @@ class Page extends Resource
             ->hideFromIndex(),
 
             new Panel('About us', $this->about()),
+            new Panel('Five stars', $this->fivestars()),
             new Panel('CEO message', $this->ceo()),
             new Panel('Environment', $this->environment()),
             new Panel('Motorcycles page', $this->motors()),
@@ -76,6 +77,27 @@ class Page extends Resource
 
 
        ];
+    }
+    protected function fivestars(){
+        return [
+            Textarea::make('English content', 'en_five')
+            ->hideFromIndex()
+            ->rules('required'),
+
+            Textarea::make('Arabic content', 'ar_five')
+            ->hideFromIndex()
+            ->rules('required' )
+            ->withMeta(['extraAttributes' => [
+                'class'=> 'rtl'
+                ]
+            ]),
+
+
+
+
+
+
+        ];
     }
 
     protected function motors(){

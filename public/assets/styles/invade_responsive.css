@@ -954,3 +954,7 @@ body {
 .ar .sub_menu_item a{
   float: right;
 }
+
+.ar #home .five_stars_title{
+  position: unset;
+}

@@ -20,7 +20,7 @@
 
 				<a href="{{ url('recall') }}" class="recall_button">
 					<i></i>
-					<span>Recall</span>
+					<span>{{ __('Recall') }}</span>
 				</a>
 	
 				<div class="sQuery slider_img_set">
@@ -33,7 +33,7 @@
 				<div class="sQuery caption_set">
 					<div class="read_more_block">
 						<div class="read_more_title">
-							<span>read more</span>
+							<span>{{ __('read more') }}</span>
 						  <div class="read_more_arrow"></div>
 						</div>
 					</div>
@@ -58,9 +58,9 @@
 		<section class="five_stars_set">
 			<div id="fsTitle" class="five_stars_title_set">
 			<div class="five_stars_year"></div>
-			<div class="five_stars_title">Honda five stars<br >services</div>
+			<div class="five_stars_title">{{ __('Honda') }} {{ __('five stars') }} <br >{{ __('services') }}</div>
 			</div>
-			<div id="fsDetails" class="five_stars_details">At Honda we not only sell cars but also we provide our clients with superior services that facilitates their lives<br >and improve their experience.. We call them the 5 Star Services.</div>
+			<div id="fsDetails" class="five_stars_details">{{ $fivestars_text }}</div>
         
 			<div class="five_stars_services_set">
 				<div class="five_stars_logo">
