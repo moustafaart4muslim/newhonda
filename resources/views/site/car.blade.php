@@ -95,9 +95,9 @@
 						<div id="portfolio" class="portfolioListing fn-portfolioListing" data-rel-list="app-master-list">
 							<nav>
 							<ul class="portfolio-filters">
-								<li><a class="actv gallery_filters" id="filter_all">Gallery</a></li>
-								<li><a data-category="Interior" class="gallery_filters" id="filter_interior">Interior</a></li>
-								<li><a data-category="Exterior" class="gallery_filters" id="filter_exterior">Exterior</a></li>
+								<li><a class="actv gallery_filters" id="filter_all">{{__('All')}}</a></li>
+								<li><a data-category="Interior" class="gallery_filters" id="filter_interior">{{__('Interior')}}</a></li>
+								<li><a data-category="Exterior" class="gallery_filters" id="filter_exterior">{{__('Exterior')}}</a></li>
 								</ul>
 							</nav>
 

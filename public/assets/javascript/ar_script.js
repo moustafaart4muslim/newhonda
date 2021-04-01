@@ -576,7 +576,7 @@ function HondaCarColors(){
 											$('.car').addClass('stop').transition({ rotate: '-1deg'})
 										}
 									}
-									if($('.car_adj').position().left < 1){
+									if($('.car_adj').position().left < 300){
 										$(".car_wheel").addClass("stopped");
 									}
 

@@ -96,3 +96,11 @@
   .ve_container {
     max-width: 100%;
   }
+
+  #portfolio nav{
+    float: left;
+  }
+
+  .portfolioListing nav ul li{
+    float: right !important;
+  }
