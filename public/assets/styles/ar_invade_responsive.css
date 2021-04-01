@@ -113,3 +113,7 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  #motors_header .sub_menu_box_element {
+    width: 160px;
+  }
