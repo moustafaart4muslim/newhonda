@@ -1,0 +1,28 @@
+.rtl{
+    direction: rtl;
+}
+
+.key-value-item .w-48,.bg-30 .w-48{
+    width:  15rem;
+}
+.group_name{
+   /* color:#ed1b2f;*/
+    color:#6b6868;
+    font-weight: bold;
+    font-size: 13px;
+}
+.nav_svg{
+    vertical-align: middle;
+}
+.leaflet-control-geosearch.bar{
+    display: none !important;
+}
+
+.active\:shadow-outline:active,.focus\:shadow-outline:focus{
+    box-shadow: 0px 0px 0px !important;
+}
+
+.btn-default:not([disabled]):not(.btn-disabled):active, .btn-default:not([disabled]):not(.btn-disabled):focus{
+    box-shadow: 0px 0px 0px !important;
+
+}

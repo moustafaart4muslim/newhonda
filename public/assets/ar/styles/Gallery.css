@@ -1,0 +1,234 @@
+
+.container {
+  marign: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  margin-left: 0;
+  margin-right: 0;
+  width: 960px;
+  position: relative;
+  overflow: hidden;
+  right:80px;
+  opacity:0;
+}
+.portfolioListing {
+  position: relative;
+  *float: left;
+  *zoom: 1;
+}
+.portfolioListing nav {
+  display: block;
+  float: right;
+  *overflow: hidden;
+  margin-bottom:30px;
+}
+.portfolioListing nav ul {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+.portfolioListing nav ul li {
+  margin: 0;
+  padding: 0 ;
+  float:right;
+  color:#545456;
+  text-transform:uppercase;
+  font-size:14px;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-shadow:#fff 0px 1px 1px
+}
+.portfolioListing nav ul li + li:after{ 
+  content: " | ";
+  color:#cacaca;
+  padding: 0 10px;
+}
+.portfolioListing nav ul li a {
+  cursor:pointer;
+  text-decoration: none;
+  color: #4f4f4f;
+}
+.portfolioListing nav ul li a:hover,
+.portfolioListing nav ul li a.actv {
+  color: #ed1b2f;
+}
+.portfolioListing.fn-portfolioListing-show-overlay .portfolioCarrousel {
+  height: 430px !important;
+  background: url('../../img/portfolio-checker-pattern.png') 0 0 no-repeat transparent;
+}
+.portfolioListing.fn-portfolioListing-show-after .portfolioCarrousel {
+  height: 372px;
+  background: url('../../img/studio-checker-pattern.png') 0 0 no-repeat transparent;
+  *zoom: 1;
+}
+.portfolioListing .portfolioListing-after {
+  width: 960px;
+  margin-left: 215px;
+  clear: both;
+  position: relative;
+  margin-top: 20px;
+}
+.portfolioListing .portfolioCarrousel {
+  overflow: hidden;
+  z-index: 50;
+  width: 965px;
+  display: block;
+  float: left;
+  height: 430px;
+}
+.portfolioListing .portfolioCarrousel article {
+  display: block;
+  list-style: none;
+  float: left;
+  height: 210px;
+  width: 237px;
+  margin:0 4px 5px 0;
+  position: relative;
+}
+.portfolioListing .portfolioCarrousel article img {
+  width: 237px;
+  height: 210px;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper {
+  width: 965px;
+  clear: both;
+  text-align: center;
+  position: relative;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  height: 18px;
+  position: relative;
+  margin-bottom: 0;
+  text-align: center;
+  width: 300px;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li {
+  list-style: none;
+  width:17px;
+  height:18px;
+  margin-left: 10px;
+  display: inline-block;
+  *display: block;
+  float: right;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li a,
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li span {
+  display: block;
+  width:17px;
+  height:18px;
+  background-image:url(../../../structure/icons/pagination.png);
+  background-repeat:no-repeat;
+  background-position:0 0;
+  text-indent: -555000px;
+  cursor: pointer;
+  position: relative;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li a:hover,
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li a:focus {
+  background-position:0 -18px;
+}
+.portfolioListing .portfolioCarrousel_nav_wrapper .portfolioCarrousel_nav li span {
+  background-position:0 -36px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SLIMBOX */
+
+#lbOverlay {
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background:url(../../../structure/icons/fs_pat.png);
+	cursor: pointer;
+}
+
+#lbCenter, #lbBottomContainer {
+	position: absolute;
+	z-index: 999;
+	overflow: hidden;
+	background-color: #fff;
+	display:none;
+}
+
+.lbLoading {
+	background: #fff url(../../../structure/icons/loader_light.gif) no-repeat center;
+}
+
+#lbImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 10px solid #fff;
+	background-repeat: no-repeat;
+}
+
+#lbPrevLink, #lbNextLink {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	outline: none;
+}
+
+#lbPrevLink {
+	left: 0;
+}
+
+#lbPrevLink:hover {
+	background: transparent url(../../../structure/icons/prevlabel.png) no-repeat 0 50%;
+}
+
+#lbNextLink {
+	right: 0;
+}
+
+#lbNextLink:hover {
+	background: transparent url(../../../structure/icons/nextlabel.png) no-repeat 100% 50%;
+}
+
+#lbBottom {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
+	line-height: 1.4em;
+	text-align: left;
+	border: 10px solid #fff;
+	border-top-style: none;
+}
+
+#lbCloseLink {
+	display: block;
+	float: right;
+	width: 66px;
+	height: 22px;
+	background: transparent url(closelabel.gif) no-repeat center;
+	margin: 5px 0;
+	outline: none;
+}
+
+#lbCaption, #lbNumber {
+	margin-right: 71px;
+}
+
+#lbCaption {
+	font-weight: bold;
+}

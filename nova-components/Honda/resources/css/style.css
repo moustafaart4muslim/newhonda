@@ -1,0 +1,19 @@
+.rtl{
+    direction: rtl;
+}
+
+.key-value-item .w-48,.bg-30 .w-48{
+    width:  15rem;
+}
+.group_name{
+   /* color:#ed1b2f;*/
+    color:#6b6868;
+    font-weight: bold;
+    font-size: 13px;
+}
+.nav_svg{
+    vertical-align: middle;
+}
+.leaflet-control-geosearch.bar{
+    display: none !important;
+}

@@ -1,0 +1,34 @@
+:root {
+  --primary: #58595b;
+  --primary-dark: #ed1b2f;
+  --primary-70: #ed1b2f;
+  --primary-50: #ed1b2f;
+  --primary-30: #ed1b2f;
+  --primary-10: #ed1b2f;
+  --logo: #fff;
+  --sidebar-icon: #CCC;
+}
+
+.bg-grad-sidebar {
+  background-color: #FFFFFF;
+  background-image: none;
+
+}
+.bg-grad-sidebar .text-white{
+  color: #6b6868;
+  /* color: #ed1b2f; */
+}
+
+.router-link-active{
+    color: #ed1b2f !important;
+
+}
+
+.dim:active, .dim:hover{
+  color : #ff4d5e;
+  opacity: 1;
+
+}
+.bg-logo.text-white{
+  color:#FFF;
+}

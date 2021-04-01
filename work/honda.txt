@@ -1,0 +1,62 @@
+﻿سيكيورتي
+عربي
+
+###
+
+------------------------
+
+
+هعدل 
+press / to search
+
+
+
+------------
+
+
+ 
+add to all modules: public static $trafficCop = false;
+
+integrate google analytics into honda website and  inside nova
+check any other  seo and google tools to integrate
+auto backup  and restore data
+check good laravel packages to add (stable and security good)
+suggest for  bassaraty to make the  theme seo friendly (5000 EGP.)
+
+
+security
+rate limiting
+owasp
+custom port and subdomain for admin
+server antivirus
+check  nova  security hardening
+check nova  plugins 
+check if nova have api enabled, to disable  it
+هشوف  لو  هحتاج احدد النوفا فيرجن في ملف الكومبوزر لانه متساب مش متحدد
+try email reset  password
+disable directory listing
+ssl redirect
+
+404  page  to be  honda  identity
+
+
+
+
+
+
+هتاكد ان الفيديوهات لو بقت اكتر من 3 او اربعة ايه اللي هيحصل  بالكود اللي بهاء حاططها ،
+وممكن احط كود جديد لسلايدر جديد
+
+
+الحل لو احتاجو ترجمة عربي للسبيكس ، اقصد للفاليو بتاعت السبيكس
+هقوللهم يكتب  كوما وبعدين يحط العربي،
+او بدل كوما  هخليه يحطها بفورمات معين ، عشان ممكن كلامهم يكون فيه كوما اصلا ، يعني مثلا
+يحط  الانجليزي في قوس فترة والعربي في قوس فترة تاني  مثلا ، او حاجة زي كده
+
+
+
+
+هعدل صفحة انفايرونمت ، التصميم بتاعها  هخليه  عادي ، يعني الفيديو هيبقى عنوان  فوقه ، وكلمتين تحت العنوان وخلاص
+والحلول البديلة  لصفحة انفايرونمت لو منفعتش تمشي كده : اني هخليها  : 
+media gallery or module
+

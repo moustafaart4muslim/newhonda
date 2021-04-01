@@ -1,0 +1,931 @@
+html { font-size:100%; }
+/* @media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} }  */
+
+/* body {
+} */
+.con_videos_set{
+  float: left;
+}
+footer{
+  padding-bottom: 10px;
+
+}
+html,
+body {
+  display: flex !important;
+  flex-direction: column !important;
+
+  min-width: 100% !important;
+}
+#responive_menu
+{
+ display: none;
+}
+
+#toggle_menu {
+  display: none;
+  width: 45px;
+  height: 45px;
+  background: rgb(0 0 0 / 2%);
+  border: none;
+  border-radius: 50%;
+}
+
+
+#toggle_menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: gray;
+  margin: 4px auto;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+#toggle_menu.on .one {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle_menu.on .two {
+  opacity: 0;
+}
+
+#toggle_menu.on .three {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+#responsive_colors{
+  display: none;
+}
+#responsivecar_menu{
+  display: none;
+}
+
+
+@media (max-width: 793px) {
+  /* .footer_stalk{
+    margin-top: 5px;
+  } */
+  /* .car_header_fx{
+    display: none;
+  }
+ */
+ #sub_menu_adj{
+  display: none;
+}
+#responsivecar_menu{
+  display: block;
+}
+
+
+ #responsive_colors{
+    /* display: block; */
+  }
+  .con_colors .color_buttons_set,.con_colors .car_set{
+    /* display: none; */
+  }
+.car_adj,.car,.car image{
+  width: 100%;
+}
+.car_wheel,.color_ins{
+  display: none !important;
+}
+
+}
+
+.footerh5{
+   margin-top: 10px;
+
+}
+.single_video_set,.gallery_set{
+  clear:both;
+}
+
+.car_menu{
+  float: right;
+  margin-left: unset !important;
+}
+
+@media only screen and (min-width: 500px) {
+  .about_ve_content,.ve_container.con_about{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .about_ve {
+    line-height: 25px;
+  }
+
+}
+.about_ve_logo.ve_logo motors_logo{
+  height: 200px !important;
+}
+@media only screen and (min-width: 992px) {
+  .hed_ed .fx_hdr{
+    display: contents;
+  }
+  
+  img { max-width: 100%; height: auto; }
+
+  .responvsive_nav{
+    display: none !important;
+  }
+  .five_stars_services_set{
+    display: block !important;
+  }
+  
+  #home_responsive{
+    display: none !important;
+
+  }
+
+}
+
+
+.single_video_set.ins_dis{
+  max-width: 100%;
+}
+.video_set,.video_thumb{
+  height: auto;
+}
+@media only screen and (max-width: 992px) {
+  .con_video_thumb,#video_embed,#video_embed iframe,.con_video_thumb img{
+    width: 100% !important;
+  } 
+
+  .video_data_set,.video_set ,.video_data {
+    width: 100% !important;
+  }
+  .video_data_set{
+    height: 250px !important;
+
+  }
+  .footer_grid ul a,.paragraph ,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title{
+    font-size:  16px !important;
+    
+  }
+  .footerh5,.ph3{
+    font-size:  18px !important;
+ 
+  }
+
+  .paragraph_set,.ceo_msg_set{
+    line-height: 20px;
+  }
+
+
+
+
+
+
+  .five_stars_services_set{
+    display: none !important;
+  }
+  #home_responsive{
+    display: block !important;
+
+  }
+
+    .wrapper {
+        margin-top: unset !important;
+
+    }
+    .slider_arrows.next {
+        /* opacity: 1 !important;
+        right: 0 !important; */
+    }
+    .slider_arrows.prev {
+        /* opacity: 1 !important;
+        left: 0 !important; */
+    }
+    #toggle_menu,
+    .logo_set {
+        margin: 0 20px;
+    }
+  #toggle_menu {
+      display: block;
+  }
+  #main_menu,
+  .language_set {
+    display: none;
+  }
+  header.fx_hdr{
+    display: none;
+}
+  #responive_menu
+   {
+    display: block;
+  }
+
+
+  .hdr_set {
+    width: auto !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #home .five_stars_set {
+     width: auto !important;
+  }
+  #home .five_stars_title {
+    text-align: center;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  #home .five_stars_details {
+    margin: 10px 20px 40px 20px;
+  }
+  .footer_set.static,
+  .footer_main {
+        height: auto !important;
+     }
+    
+    .footer_container,
+    .footer_stalk {
+        width: auto !important;
+    }
+  .footer_container {
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* grid-gap: 10px; */
+  }
+  .footer_grid {
+      margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about_ve_logo.ve_logo.motors_logo,.about_ve_content{
+    clear: both;
+  }
+  .about_ve_logo.ve_logo.motors_logo{
+    margin: auto;
+    float: none;
+  }
+  .about_ve_set {
+    text-align: center;
+  }
+  .fs_data_set,.fs_logo_set{
+    clear:both;
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .about_ve_set{
+    text-align: center;
+  
+  }
+  .ve_container.con_about{
+    padding: 20px
+  }
+  #VV .ve_logo.car_logo{
+    margin: auto;
+    float: unset;
+    height: 100px !important;
+    background-position: center;
+    }
+  .fs_logo{
+    position: unset;
+    margin: auto;
+  }
+  .footer_grid,.footer_stalk_block,.hot_line_icon,.footer_stalk_block .footerh5.st,.developed_by {
+    text-align: center;
+  }
+  .social_footer,.like_us{
+    display: table;
+    margin: auto;
+  }
+
+  .hot_line_icon{
+    float: none;
+    margin: auto;
+  }
+  .footer_grid ul a,.paragraph,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title{
+    font-size:  20px !important;
+    line-height: normal;
+  }
+  .about_ve {
+    line-height: 30px;
+  }
+  .ph3{
+    font-size:  25px !important;
+    line-height: normal;
+ 
+  }
+  .footerh5{
+    font-size:  22px !important;
+    line-height: normal;
+ 
+  }
+}
+
+
+
+
+
+
+
+/*New **/
+
+
+.responvsive_nav .nav-item{
+    text-align: center;
+}
+.responvsive_nav .nav-item a{
+}
+
+.responvsive_nav .nav-item a{
+    /* border: 1px solid #eee; */
+    color: #989898;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 22px;
+}
+
+.responvsive_nav .nav-item a:hover,.responvsive_nav .nav-item a:focus
+,.responvsive_nav .nav-item a:active
+{
+    background-color: #ed1b2f;
+    color: #FFF !important;
+}
+
+.responvsive_nav .dropdown-menu{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1920px;
+}
+.slider_img.active{
+    background-size: cover !important;
+}
+
+
+/* home five stars  */
+#home_responsive .five_stars_block_responsive{
+  
+      border-bottom: 1px solid #eceaea;
+  }
+  
+  #home_responsive .five_stars_block_responsive.trade_in,#home_responsive .five_stars_block_responsive.test_drive{
+  border-left: 1px solid #eceaea;
+}
+#home_responsive .five_stars_title_set {
+  margin-bottom: 30px;
+  color: #545456;
+  overflow: hidden;
+}
+
+#home_responsive .five_stars_year {
+  font-weight: bold;
+  font-size: 70px;
+  background: #fff;
+  color: rgba(65, 65, 68, 0.9);
+  text-shadow: -2px 0 2px #fff, 0 0 0 #000, -3px 0 3px #fff;
+  z-index: 999;
+}
+
+#home_responsive .five_stars_title {
+  font-size: 29px;
+  line-height: 32px;
+  padding-top: 3px;
+}
+
+#home_responsive .five_stars_details {
+  color: #7b7b7b;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
+
+#home_responsive .five_stars_logo_responsive {
+  background: #ed1b2f url(../../structure/f_star/f_stars.png) no-repeat center center;
+  height: 180px;
+  z-index: 399;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  margin: auto;
+}
+.five_star_pointer{
+  background-color: #f3f3f3;
+}
+#home_responsive .five_stars_block_responsive {
+  background-color: #f3f3f3;
+  height: 220px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#home_responsive .five_stars_block_logo_responsive {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 180px;
+  top: 180px;
+  z-index: 99;
+}
+#home_responsive .five_stars_block_responsive .five_stars_block_logo_responsive{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#home_responsive .five_stars_block_responsive.warranty .five_stars_block_logo_responsive{
+  background-image:url(../../structure/f_star/warranty.png);}
+
+#home_responsive .five_stars_block_responsive.trade_in .five_stars_block_logo_responsive {
+  background-image: url(../../structure/f_star/trade_in.png);
+}
+
+#home_responsive .five_stars_block_responsive.maintenancee .five_stars_block_logo_responsive {
+  background-image: url(../../structure/f_star/maintenancee.png);
+}
+
+#home_responsive .five_stars_block_responsive.test_drive .five_stars_block_logo_responsive {
+  background-image: url(../../structure/f_star/test_drive.png);
+}
+
+#home_responsive .five_stars_block_responsive.insurance .five_stars_block_logo_responsive {
+  background-image: url(../../structure/f_star/insurance.png);
+}
+
+#home_responsive .five_stars_block_responsive.warranty {
+  z-index: 5;
+}
+
+#home_responsive .five_stars_block_responsive.trade_in {
+  z-index: 4;
+}
+
+#home_responsive .five_stars_block_responsive.maintenancee {
+  z-index: 3;
+}
+
+#home_responsive .five_stars_block_responsive.test_drive {
+  z-index: 2;
+}
+
+#home_responsive .five_stars_block_responsive.insurance {
+  z-index: 1;
+}
+
+#home_responsive .five_stars_block_overlay {
+  background: url(../../structure/icons/fs_pat.png);
+  width: 151px;
+  height: 180px;
+  z-index: 199;
+  color: #fff;
+  line-height: 18px;
+  font-size: 14px;
+  display: none;
+  cursor: pointer;
+  padding: 63px 29px;
+}
+
+.five_stars_text{
+  position: absolute;
+  bottom:  50px;
+  width: 50%;
+  font-size: 18px;
+
+} 
+.five_stars_text a{
+  color: #ed1b2f
+}
+
+/* Footer */
+.footer_container{
+  width: unset !important;
+}
+
+
+
+/* #basics */
+.blue_skies_data{
+  float: none !important;
+}
+.blue_skies_data .paragraph{
+  /* padding: 20px !important; */
+
+}
+.about_ve_content{
+  float: unset;
+}
+
+.title_box_set,.under_box ,.caption_set,.height_adj,.gallery_set,.t_flight,.car_header_set,.ve_container,.con_gallery ,.about_ve_set ,.con_title_set,.clr_brd.half,.con_in_gallery_set,.motors_sep_border,.video_thumb,.video_embed,.paragraph_set,.ceo_msg_set,.blue_skies_data,.box_title,.locations_panel,.locations_set,
+.about_ve_content{ width: unset  !important }
+/* .title_box_border { width: unset  !important } */
+
+.change_lang_btn{
+  /* display: none !important; */
+}
+.change_lang_btn{
+  font-size: 14px;
+}
+
+/* *{
+  opacity:  1 !important;
+} */
+.sub_menu_box_element{
+  /* height: 150px !important; */
+}
+.blue_skies_logo{
+  margin: 20px;;
+}
+
+.gallery_set{
+  height: auto !important;
+}
+
+
+.video_img{
+  max-height:400px;
+}
+
+.wrapper.fstars{
+  margin-top: unset !important;
+}
+
+.fs_data_set {
+  float: none;
+  width: auto;
+}
+.fs_block{
+  width: auto;
+  min-height: 233px;
+  height: auto;
+}
+
+.responvsive_nav {
+  background-color: #FFF !important;
+}
+
+.locations_wrapper{
+  margin: auto;
+  width: auto;
+  /* max-width: 800px; */
+}
+
+.locations_animate,.locations_set{
+  position: unset;
+  height: auto;
+}
+.locations_panel{
+  width: 100% !important;
+  display: contents;
+}
+
+.iframe,.locations_map_wrapper iframe{
+  width: 100% !important;
+  height: 400px !important;
+  /* display: none; */
+}
+.map{
+  display: none;
+
+}
+.slider_img {
+  max-width: 100% !important;
+}
+
+
+#VV .about_ve_content {
+  float: left;
+  max-width: 100%;
+  /* margin-left: 40px; */
+  /* width: auto; */
+}
+.about_ve_logo.ve_logo.car_logo{
+  /* margin-bottom: 60px; */
+}
+#VV .ve_logo.car_logo {
+  width: 195px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.portfolioListing .portfolioCarrousel{
+  height: 0px !important;
+}
+.con_gallery .main{
+  width: 80%;
+}
+.con_gallery .content{
+  width: 100%;
+}
+
+.video_thumb_cars{
+  width: 90%;
+}
+.con_video_set{
+  max-width: 1000px;
+  margin: auto;
+}
+.con_videos_thumb{
+  border-top: 1px solid #CCC;
+}
+#video_embed iframe{
+  position: absolute;
+  height: 100%;
+
+}
+@media (max-width: 500px) {
+  .con_video_thumb img{
+    top: 50px
+  }
+
+}
+@media (max-width: 600px) {
+  .con_video_thumb img{
+    top: 100px
+  }
+
+}
+@media (max-width: 793px) {
+
+  .con_videos_set{
+    float: none;
+    margin: auto;
+  }
+
+  #video_embed iframe{
+    position: absolute;
+    height: 100%;
+  
+  }
+}
+
+.tr_set .td:nth-child(3){
+  border-left: 1px solid #c2c2c2;
+}
+/* .td{ */
+  /* width: auto !important; */
+  /* float: none !important; */
+/* } */
+
+.specific_table_set .td_main{
+  margin-right: unset !important;
+  width: unset !important;
+}
+
+.specific_table_set .grade_column, .specific_table_set .td{
+  /* width: auto !important; */
+}
+.td_main,.grade_head   {
+  padding-left: 20px !important;
+}
+.specific_table_set .grade_column, .specific_table_set .td,.specific_table_set .tr_set{
+  height: auto !important;
+}
+.sub_menu_item,.sub_menu_box{
+  z-index: 3000;
+}
+
+.portfolioListing .portfolioCarrousel {height:215px}
+/* .menu_tracker_arrow_set,#menu_tracker{
+  z-index: 5000;
+} */
+
+#motors_header #sub_menu_adj{
+  
+  float: left;
+    margin: auto;
+    /* text-align: center; */
+    /* display: table; */
+    margin-left: unset !important;
+}
+
+
+/*Forms*/
+@media (max-width: 500px) {
+  .slider_img ,#main_slider{
+    height: 350px !important;
+  }
+  
+  .form_input,.re{
+    height: 40px;
+  } 
+  .form_label{
+    height: 40px;
+  } 
+  .form_block{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+   }
+  .submit_set{
+    float: left;
+    margin-left: 108px;
+  }
+}
+@media (max-width: 900px) {
+
+  .form_input,.re{
+    height: 35px;
+  } 
+  .form_label{
+    height: 36px;
+  } 
+  .form_block{
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+   }
+  /* .submit_set{
+    float: left;
+  } */
+}
+.notice{
+  max-width: 100%;
+  width: auto;
+}
+
+.menu_set {
+  margin-right: 100px;
+}
+
+
+.con_videos_thumb{
+  text-align: center; 
+}
+
+.video_ex_title_set {
+  height: auto;
+}
+#motors_header .sub_menu_box_element {
+  height: 153px;
+ 
+  width: 220px;
+}
+.box_title{
+  /* line-height: 50px; */
+  /* top: 50px; */
+}
+.responsive_title_box{
+  display: none;
+  
+}
+
+@media (max-width: 500px) {
+
+  .box_title{
+    line-height: 40px;
+    display: none;
+    float: none;
+    left: 10px;
+  }
+  .title_box_border{
+    /* display: none; */
+    
+  }
+  
+  .responsive_title_box{
+    display: block;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #7b7b7b;
+    text-align: left;
+    margin-top: 40px;
+  }
+  
+}
+
+/*
+@media (max-width: 400px) {
+
+   .box_title{
+
+    float: none;
+    left: 10px
+  } 
+
+  .box_set.box_red{
+    width: 100%;
+    
+  }
+  .title_box_set{
+    display: inline-table;
+
+  }
+}*/
+.specific_table_set .td_main{
+  height: auto;
+}
+
+.gallery_img_set{
+  background-size: cover;
+}
+
+.wrapper > .container,.wrapper.container{
+  padding-left: 0px;
+  padding-right: 0px;
+  
+}
+
+.about_ve,.con_gallery,.ve_container{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.ve_container.con_about.container{
+  padding-top : 50px;
+  padding-bottom : 50px;
+  padding-left : 15px;
+}
+
+.about_ve_logo.ve_logo.car_logo {
+  height: auto !important;
+}
+#responsive_colors .gallery_set{
+  display: inline-grid;
+  margin: auto;
+  text-align: center;
+}
+#responsive_colors .honda_gallery {
+  text-align: center;
+}
+
+#responsive_colors .gallery_img_set {
+  background-size: contain;
+}
+
+.t_flight,.paragraph.p40,.gallery_set {
+  padding: 15px
+}
+/* .gallery_set{
+
+} */
+
+.specific_set,#SendEmail,#about,#About{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#responvsive_nav .ins_dis{
+  opacity: 0;
+
+}
+
+#Inspiration .gallery_set a{
+  background-size: contain;
+}
+
+.car_header_fx.container{
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.car_wheel{
+  background-size: cover;
+  width: 46px;
+  height: 46px; 
+  border-radius: 50%;
+  /* display: none; */
+}
+
+#Environment .under_box{
+  max-width: 100%;
+  padding: 15px;
+}
+.green_c_set,#Environment .single_video_set{
+  max-width: 100%;
+
+}
+
+
+#Environment .responsive_title_box{
+  padding-left:15px
+}
+
+
+.menu_tracker_arrow_set{
+  height: 23px;
+}
+
+.menu_tracker{
+  z-index: 3001;
+}
+.menu ul{
+  z-index: 3002;
+}
+
+.sub_menu_box_element {
+  height: 150px;
+}
+
+.content{
+  /* display: block; */
+}
