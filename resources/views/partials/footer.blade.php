@@ -33,12 +33,12 @@
 				<h5 class="footerh5">{{ __('Five Stars') }}</h5>
 				<ul>
 					<li><a href="{{ url('fivestars') }}">{{ __('Warranty') }}</a></li>
-					<li><a href="{{ url('trade-in') }}">{{ __('Trade-In') }}</a></li>
+					<li><a href="{{ url('trade-in') }}">{{ __('Trade In') }}</a></li>
 					<li><a href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a></li>
 					<li><a href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a></li>
 					<li><a href="{{ url('fivestars') }}">{{ __('Insurance') }}</a></li>
 				</ul>
-			</section><section class="footer_grid   col-lg-2 col-sm-4 col-12  pl-0 pr-0  last">
+			</section><section class="footer_grid   col-lg-2 col-sm-4 col-12  pl-0 pr-0  last" style="margin-left: -10px; margin-right: 10px;">
 				<h5 class="footerh5">{{ __('Contact Us') }}</h5>
 				<ul>
 					<li><a href="{{ url('locations') }}/">{{ __('Honda Locations') }}</a></li>
