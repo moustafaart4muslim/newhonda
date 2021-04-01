@@ -145,14 +145,27 @@ function mbAnimate(){
 
 function fvstarsAnimate(){
 	$('.five_stars_logo').animate({opacity:1}).transition({ rotate: '0deg' });
-	$('.five_stars_block').each(function(i) {
-		var pos = $(this).attr('data-title');
-		setTimeout(function() {
-			$('.five_stars_block:eq('+i+')').animate({left:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
-			$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
-			});
-		}, 100 * (i + 1))
-	});
+	if(window.lang == 'eg'){
+		$('.five_stars_block').each(function(i) {
+			var pos = $(this).attr('data-title');
+			setTimeout(function() {
+				$('.five_stars_block:eq('+i+')').animate({left:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
+				$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
+				});
+			}, 100 * (i + 1))
+		});
+	
+	}else{
+		$('.five_stars_block').each(function(i) {
+			var pos = $(this).attr('data-title');
+			setTimeout(function() {
+				$('.five_stars_block:eq('+i+')').animate({right:pos, opacity:1}, 1000, 'easeInOutCubic',function() {
+				$(this).children('.five_stars_block_logo').animate({top:0}, 1000, 'easeInOutBack');
+				});
+			}, 100 * (i + 1))
+		});
+	
+	}
 }
 function HondaBox(doAfterfunc){
 	doAfter = window[doAfterfunc];

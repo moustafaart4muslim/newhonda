@@ -25,6 +25,11 @@
 	
 	
 	<link href="{{ asset( 'assets/styles/invade_responsive.css?v='  . config('app.version'))}}" rel="stylesheet" type="text/css" >
+
+	<script>
+		window.lang = "{{resolve('lang')}}";
+	</script>
+
 </head>
 
 <body id="main" class="{{resolve('lang')}} @yield('body_class')">
