@@ -936,4 +936,25 @@ body {
 }
 
 
+@media (max-width: 500px) {
 
+  .form_label{
+    float:none;
+  }
+  .form_input{
+    width: 95%;
+  }
+  .form_set,.form_input.select.re,.form_input.textarea,.select_drop_wrap,.select_current,.select_drop_set,.select_drop_set,#long .select_drop_set{
+    width: 100%;
+  }
+  .form_input, .re{
+    height: 40px;
+  }
+  input[type=text], textarea{
+    width: 100%;
+  }
+  input[type=text], textarea{
+    margin: 0px;
+    padding: 5px;
+  }
+}

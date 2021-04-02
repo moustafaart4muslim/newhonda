@@ -139,7 +139,7 @@
 							<div class="form_label">{{ __('Comments') }}</div>
 							<div class="form_input textarea">
 								<div class="txtare_brdr"></div>
-								<textarea name="comments" placeholder="{{ __('Comments..') }}" ></textarea>
+								<textarea name="comments" placeholder="{{ __('Comments') }}.." ></textarea>
 							</div>
 						</div>
 						<div class="submit_set">

@@ -728,6 +728,7 @@ function HondaMaintenance(){
 	HondaFooter();
 	$('#email_form').HondaForm();
 	$('#select').HondaSelect({'submenu':true});
+	$('#center').HondaSelect();
 	$('#Model').HondaSelect();
 	WaitFun('HondaMaintenanceFunc');
 }

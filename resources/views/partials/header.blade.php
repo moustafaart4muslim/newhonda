@@ -69,7 +69,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url('fivestars') }}"> {{ __('Warranty') }}</a>
-                        <a class="dropdown-item" href="{{ url('trade-in') }}">{{ __('Trade-In') }}</a>
+                        <a class="dropdown-item" href="{{ url('trade-in') }}">{{ __('Trade In') }}</a>
                         <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
                         <a class="dropdown-item" href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
                         <a class="dropdown-item" href="{{ url('fivestars') }}">{{ __('Insurance') }}</a>
@@ -91,7 +91,7 @@
 					{{ __('Honda Owners') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintainence') }}</a>
+                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
                         <a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
                     </div>
 				</li>
