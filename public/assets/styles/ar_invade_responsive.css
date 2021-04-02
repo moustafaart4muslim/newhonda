@@ -151,6 +151,10 @@
     #ins1, #t_flight1, #t_flight2, #Inspiration .ins_dis{
       right: 0px;
     }
+
+    .footer_stalk_block .footerh5,.footer_stalk_block  .hot_line_title,.footer_stalk_block  .hot_line{
+      text-align: center;
+    }
   }
 
 

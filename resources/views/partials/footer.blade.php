@@ -72,7 +72,7 @@
 				<div class="footer_stalk_block last">
 					<div class="like_us">
 						<div class="like_icon"></div>
-						<div class="like_data">{{ __('Like us') }}<br >{{ __('Total likes') }} <span id="Likes" class="likes" data-title="" data-id=""></span></div>
+						<div class="like_data">{{ __('Like us') }}</div>
 						<div class="like_btn"><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FHondaEgypt&amp;width=450&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false&amp;appId=615740925144427" scrolling="no" frameborder="0" style="background-color: #f3f3f3; border: none; overflow: hidden; width: 120px; height: 21px; margin-top: 4px;" allowtransparency="true"></iframe></div>
 					</div>
 				</div>

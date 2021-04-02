@@ -764,6 +764,7 @@ body {
 
 .video_ex_title_set {
   height: auto;
+  min-height: 80px;
 }
 #motors_header .sub_menu_box_element {
   height: 153px;
@@ -987,3 +988,5 @@ body {
 #Inspiration,#Environment{
   padding: 10px;
 }
+
+
