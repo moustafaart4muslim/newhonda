@@ -67,7 +67,7 @@
 
 						<div class="form_block">
 							<div class="form_label">{{ __('E-mail') }}</div>
-							<div class="form_input"><input type="text" name="{{ __('email') }}" class="re" placeholder="E-mail Address" autocomplete="off" /></div>
+							<div class="form_input"><input type="text" name="{{ __('email') }}" class="re" placeholder="{{ __('E-mail') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
@@ -77,7 +77,7 @@
 
 						<div class="form_block">
 							<div class="form_label">{{ __('Car Model') }}</div>
-							<div class="form_input"><input type="text" name="car_model" class="re" placeholder="{{ __('Model of your car') }}" autocomplete="off" /></div>
+							<div class="form_input"><input type="text" name="car_model" class="re" placeholder="{{ __('Car Model') }}" autocomplete="off" /></div>
 						</div>
 
 						<div class="form_block">
@@ -102,7 +102,7 @@
 							<div class="form_label">{{ __('Comments') }}</div>
 							<div class="form_input textarea">
 								<div class="txtare_brdr"></div>
-								<textarea name="comments" placeholder="{{ __('Comments..') }}" ></textarea>
+								<textarea name="comments" placeholder="{{ __('Comments') }}" ></textarea>
 							</div>
 						</div>
 						<div class="submit_set">
