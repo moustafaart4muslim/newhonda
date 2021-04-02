@@ -217,9 +217,9 @@ function HondaInspirationDoAfterBox(){
 		})
 	});
 	$('#ins1').animate({right:0, opacity:1}, 600, 'easeInOutCubic')
-	$('#ins2').find('.ins_dis').each(function(i) {
+	$('.ins2').find('.ins_dis').each(function(i) {
 		setTimeout(function() {
-			$('#ins2').find('.ins_dis').eq(i).animate({opacity:1, right:0}, 600, 'easeInOutCubic')
+			$('.ins2').find('.ins_dis').eq(i).animate({opacity:1, left:0}, 600, 'easeInOutCubic')
 		}, 150 * (i + 1))
 	});
 }

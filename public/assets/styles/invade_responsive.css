@@ -161,7 +161,7 @@ body {
     height: 250px !important;
 
   }
-  .footer_grid ul a,.paragraph ,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title{
+  .footer_grid ul a,.paragraph ,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title,.fs_details{
     font-size:  16px !important;
     
   }
@@ -302,7 +302,7 @@ body {
     float: none;
     margin: auto;
   }
-  .footer_grid ul a,.paragraph,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title{
+  .footer_grid ul a,.paragraph,.paragraph_set ,.ceo_msg_set,.about_ve,.video_ex_sub,.about_ve_content,.notice,.form_title,.locations_title,.fs_details{
     font-size:  20px !important;
     line-height: normal;
   }
@@ -936,8 +936,9 @@ body {
 }
 
 
-@media (max-width: 500px) {
 
+@media (max-width: 500px) {
+/*Forms*/
   .form_label{
     float:none;
   }
@@ -957,4 +958,32 @@ body {
     margin: 0px;
     padding: 5px;
   }
+
+
+  /* fivestars */
+  
+
+  .fivestars .box_set{
+    right: 0;
+    float: unset;
+    margin: auto;
+
+  }
+
+}
+
+
+.location_address ,.location_city {
+  max-width: 100%;
+}
+.responsive_title_box{
+  line-height: normal;
+}
+.t_flight, .paragraph.p40, .gallery_set{
+  clear: both;
+}
+
+  
+#Inspiration,#Environment{
+  padding: 10px;
 }

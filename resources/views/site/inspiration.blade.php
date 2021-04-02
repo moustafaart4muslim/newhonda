@@ -87,10 +87,19 @@
 						<div class="video_data_set">
 							<div class="video_data ins_dis">
 								<div class="video_title ins_dis">
-								
-									{{$insp->video_title}}
+									<?php
+										if(resolve('lang') == 'en'){
+											$video_title= 'video_title';
+											$video_brief= 'video_brief';
+										}else{
+											$video_title= 'ar_video_title';
+											$video_brief= 'ar_video_brief';
+
+										}
+									?>
+									{{$insp->$video_title}}
 								</div>
-								<div class="video_sub_title ins_dis">{{$insp->video_brief}}</div>
+								<div class="video_sub_title ins_dis">{{$insp->$video_brief}}</div>
 							</div>
 						</div>
 						<div class="video_set container-fluid">

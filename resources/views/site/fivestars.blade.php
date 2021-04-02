@@ -12,7 +12,7 @@
 @section('content')
 
 
-<div class="wrapper normal container" id="About">
+<div class="wrapper normal container fivestars" id="About">
 
 		<!-- <div class="title_box_fx"> -->
 			<section class="title_box_set">

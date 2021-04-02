@@ -20,9 +20,9 @@
 					<div class="box_inspiration_mask_2 mask_rem"></div>
 				</div>				
 			</div>
-			<div class="box_title">{{__('Events')}}</div>
+			<div class="box_title">{{__('Honda')}} {{__('Events')}}</div>
 		</section>
-		<div class="responsive_title_box">{{_('Events')}}</div>
+		<div class="responsive_title_box">{{__('Honda')}} {{__('Events')}}</div>
 
 		@foreach($model as $event)
 			<section class="t_flight" id="t_flight{{ $event->id }}">

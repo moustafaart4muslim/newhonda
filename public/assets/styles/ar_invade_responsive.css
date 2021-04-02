@@ -137,9 +137,9 @@
     }
 
     .box_set{
-      right: 0;
+      /* right: 0;
       float: unset;
-      margin: auto;
+      margin: auto; */
 
     }
     .title_box_border {
@@ -148,6 +148,9 @@
     .submit_set{
       float: right;
     }
+    #ins1, #t_flight1, #t_flight2, #Inspiration .ins_dis{
+      right: 0px;
+    }
   }
 
-  
+
