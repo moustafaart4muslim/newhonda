@@ -253,6 +253,20 @@ body {
   .footer_grid {
       margin: 0 !important;
   }
+  #responvsive_nav{
+    display: block;
+  }
+  #responsive_logo{
+    float: left;
+  }
+
+  .navbar-toggler{
+    float: right;
+    position: relative;
+    top: 30px;
+  }
+  
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -990,3 +1004,4 @@ body {
 }
 
 
+/*Fix mobile menu*/

@@ -14,8 +14,8 @@
 	<div class="container">
 
 		<nav class="responvsive_nav navbar navbar-expand-lg navbar-light bg-light" id="responvsive_nav">
-			<a class="navbar-brand ins_dis" href="{{ url('/') }}">
-				<a href="{{ url('/') }}"><img src="structure/ui/logo_default.png" width="130" height="94" alt="Honda logo" ></a>
+			<a class="navbar-brand ins_dis" href="{{ url('/') }}" id="responsive_logo">
+				<img src="structure/ui/logo_default.png"  alt="Honda logo" >
 			</a>
 			<button class="navbar-toggler ins_dis" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
