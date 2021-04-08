@@ -265,6 +265,10 @@ body {
     position: relative;
     top: 30px;
   }
+
+  #navbarSupportedContent{
+    clear: both;
+  }
   
 
 }
