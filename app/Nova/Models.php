@@ -98,7 +98,7 @@ class Models extends Resource
             \IziDev\KeyValueSuggestion\KeyValueSuggestion::make('Specifications')
                 ->suggestion($suggestion)
                 ->length(1)
-                ->help('If you want the white circle, just wite (true) in the value field, it will be converted to the white circle in rendering the website.')
+                ->help('If you want the white circle(denoting that the option is available), just write (true) in the value field, it will be converted to the white circle in rendering the website.')
                 ->max(20)
                 ->display("title", "title", "description") //string $title,string $showInput, string $description = null
 

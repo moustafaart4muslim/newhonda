@@ -351,7 +351,7 @@ class Car extends Resource
             ->help(
                 'Hint: You can drag and drop images to reorder them.<br> You can edit image details by clicking on the edit icon on each slide.'
             )
-            
+            /*
             ->fields(function () {
                 return [
 
@@ -397,7 +397,7 @@ class Car extends Resource
                           
                 ];
             })
-            
+            */
             ->accept('image/*')
             ->autouploading()
             ->sortable()

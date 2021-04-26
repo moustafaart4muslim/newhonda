@@ -10,7 +10,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 // use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use Spatie\Image\Manipulations;
 
 class Car extends Model implements HasMedia
 {
@@ -33,6 +33,17 @@ class Car extends Model implements HasMedia
         $this->addMediaConversion('medium-size')
             ->width(200)
             ->height(200);
+
+        // $this->addMediaConversion('slider')
+        // ->fit(Manipulations::FIT_FILL, 2100, 0)
+        // ->background('007698');
+        // $this->addMediaConversion('slider')
+        // ->fit(Manipulations::FIT_CONTAIN, 2100, 0)
+        // ->background('007698');
+        $this->addMediaConversion('slider')
+        ->fit(Manipulations::FIT_MAX, 2100, 0)
+        ->background('007698');
+            
 
         $this->addMediaConversion('front_wheel')
         ->performOnCollections('front_wheel')

@@ -41,7 +41,7 @@
 		<div class="sQuery slider_img_set">
 			@foreach ( $slides  as $slide)
 				<div class="slider_img active" 
-				style="background: url({{$slide->getFullUrl()}}) center center no-repeat rgb(0, 0, 0); width: 1552px;" 
+				style="background: url({{$slide->getUrl('slider')}}) center center no-repeat rgb(0, 0, 0); width: 1552px;" 
 				id="{{ $car->$db_name }} ">
 				</div>
 
