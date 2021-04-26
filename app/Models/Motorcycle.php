@@ -12,6 +12,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Spatie\Image\Manipulations;
 
 class Motorcycle extends Model implements HasMedia,Sortable
 {
@@ -38,7 +39,10 @@ class Motorcycle extends Model implements HasMedia,Sortable
             ->width(200)
             ->height(200);
 
-  
+        // $this->addMediaConversion('slider')
+        //     ->fit(Manipulations::FIT_MAX, 2100, 0)
+        //     ->background('007698');
+    
         $this->addMediaConversion('video_thumb')
             ->width(230)
             ->height(95)

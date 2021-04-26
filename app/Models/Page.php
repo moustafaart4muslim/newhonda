@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 // use Spatie\MediaLibrary\Models\Media;
@@ -41,10 +42,12 @@ class Page extends Model implements HasMedia
         ->performOnCollections('motorvideos')
         ;
         $this->addMediaConversion('motorslider')
-        
-        ->height(600)
-        ->performOnCollections('motorslider')
-        ;
+        ->fit(Manipulations::FIT_MAX, 2100, 0)
+        ->background('FFFFFF');
+
+        // ->height(600)
+        // ->performOnCollections('motorslider')
+        // ;
 
         
 

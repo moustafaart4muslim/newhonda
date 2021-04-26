@@ -200,6 +200,7 @@ class Motorcycle extends Resource
             ->help(
                 'Hint: You can drag and drop images to reorder them.<br> You can edit image details by clicking on the edit icon on it.'
             )
+            /*
             ->fields(function () {
                 return [
 
@@ -245,7 +246,7 @@ class Motorcycle extends Resource
                           
                 ];
             })
-
+            */
             ->accept('image/*')
             ->autouploading()
             ->sortable()

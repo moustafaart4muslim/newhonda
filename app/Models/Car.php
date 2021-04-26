@@ -34,15 +34,9 @@ class Car extends Model implements HasMedia
             ->width(200)
             ->height(200);
 
-        // $this->addMediaConversion('slider')
-        // ->fit(Manipulations::FIT_FILL, 2100, 0)
-        // ->background('007698');
-        // $this->addMediaConversion('slider')
-        // ->fit(Manipulations::FIT_CONTAIN, 2100, 0)
-        // ->background('007698');
         $this->addMediaConversion('slider')
         ->fit(Manipulations::FIT_MAX, 2100, 0)
-        ->background('007698');
+        ->background('FFFFFF');
             
 
         $this->addMediaConversion('front_wheel')

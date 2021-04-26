@@ -137,7 +137,7 @@ class Page extends Resource
             ->help(
                 'Hint: You can drag and drop images to reorder them.<br> You can edit image details by clicking on the edit icon on each slide.'
             )
-            
+            /*
             ->fields(function () {
                 return [
 
@@ -183,13 +183,15 @@ class Page extends Resource
                           
                 ];
             })
-            
+            */
             ->accept('image/*')
             ->autouploading()
             ->sortable()
             ->attachUsing(function (HasMedia $model, UploadedFile $file, string $collectionName, string $diskName, string $fieldUuid) {
                 setRandomMediaName( $model, $file,$collectionName,$diskName,$fieldUuid);
             })
+
+            
             ->creationRules('required') 
             ->hideFromIndex()
             ,
