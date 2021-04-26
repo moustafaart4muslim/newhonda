@@ -111,7 +111,7 @@
 
 									<div class="gallery_set">
 										@foreach($car->getMedia('gallery') as $item)
-											<a href="{{ $item->getFullUrl() }}" rel="lightbox-gallery"
+											<a href="{{ $item->getUrl('resized') }}" rel="lightbox-gallery"
 												class="gallery_img_set {{ $item->getCustomProperty('type') }} filters ins_dis" 
 												data-categories="{{ $item->getCustomProperty('type') }}"
 												style="background-image: url({{$item->getUrl('thumb')  }})"

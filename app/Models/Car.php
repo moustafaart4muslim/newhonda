@@ -30,6 +30,10 @@ class Car extends Model implements HasMedia
         ->nonQueued()
         ;
 
+        $this->addMediaConversion('resized')
+        ->performOnCollections('gallery')
+        ;
+
         $this->addMediaConversion('medium-size')
             ->width(200)
             ->height(200);
@@ -50,7 +54,7 @@ class Car extends Model implements HasMedia
             ->width(230)
             ->height(95)
             ->performOnCollections('videos')
-            ;
+        ;
      
     }
     
