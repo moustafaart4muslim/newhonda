@@ -24,6 +24,9 @@ class Page extends Model implements HasMedia
     {
     
         
+        $this->addMediaCollection('motorgallery')->useDisk('motorgallery')
+        // ->withResponsiveImages()
+        ;
 
         $this->addMediaCollection('motorslider')->useDisk('motorslider')
         ->withResponsiveImages()
@@ -43,7 +46,28 @@ class Page extends Model implements HasMedia
         ;
         $this->addMediaConversion('motorslider')
         ->fit(Manipulations::FIT_MAX, 2100, 0)
-        ->background('FFFFFF');
+        ->background('FFFFFF')
+        ->performOnCollections('motorslider')
+
+        ;
+
+
+
+        
+        $this->addMediaConversion('resized')
+        ->fit(Manipulations::FIT_MAX, 2100, 0)
+        ->background('FFFFFF')
+        ->performOnCollections('motorgallery')
+        ;
+
+
+        $this->addMediaConversion('thumb')
+        ->crop('crop-center',237,210)
+        ->performOnCollections('motorgallery')
+        ->nonQueued()
+        ;
+
+        
 
         // ->height(600)
         // ->performOnCollections('motorslider')

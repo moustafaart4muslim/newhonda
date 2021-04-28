@@ -35,6 +35,13 @@ class Motorcycle extends Model implements HasMedia,Sortable
         ->nonQueued()
         ;
 
+        $this->addMediaConversion('resized')
+        ->performOnCollections('motorgallery')
+        ;
+
+
+
+
         $this->addMediaConversion('medium-size')
             ->width(200)
             ->height(200);
