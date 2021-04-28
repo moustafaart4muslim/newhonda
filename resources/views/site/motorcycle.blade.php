@@ -115,7 +115,8 @@
 
 						<div id="app-master-list" class="hiddzen">
 							@foreach($gallery as $item)
-							<a href="{{ $item->getUrl('resized') }}" rel="lightbox-gallery" class="gallery_img_set" data-categories="{{ $item->getCustomProperty('type') }}" style="background-image: url({{$item->getFullUrl()  }})">
+							<a href="{{ $item->getUrl('resized') }}" rel="lightbox-gallery" class="gallery_img_set" data-categories="{{ $item->getCustomProperty('type') }}"
+							 style="background-image: url({{$item->getUrl('thumb')  }})">
 								<div class="gallery_zoom_icon"></div>
 								<div class="gallery_caption_set">
 									<div class="gallery_caption_arrow"></div>
