@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use App\Models\Category;
+use App\Models\CEO;
 use App\Models\Dealer;
 use App\Models\Event;
 use App\Models\HomeSlider;
@@ -110,9 +111,11 @@ class SiteController extends BaseController
     }
     public function ceo(){
         $mod = "ceo";
-        $page = Page::select('en_ceo','ar_ceo')->find(1);
+        // $page = Page::select('en_ceo','ar_ceo')->find(1);
+
+        $ceo = CEO::orderBy('sort_order')->get();
         return \View::make('site.ceo')
-        ->with('page',$page)
+        ->with('ceo',$ceo)
         ->with('mod',$mod)
         ;
     }

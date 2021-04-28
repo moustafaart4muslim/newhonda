@@ -62,8 +62,12 @@ body {
 #responsivecar_menu{
   display: none;
 }
-
-
+.ceo_img img{
+  margin: auto;
+}
+.ceo_msg_set .msg{
+  margin-top: 10px;
+}
 @media (max-width: 793px) {
   /* .footer_stalk{
     margin-top: 5px;

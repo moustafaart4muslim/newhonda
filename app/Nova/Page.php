@@ -63,7 +63,7 @@ class Page extends Resource
 
             new Panel('About us', $this->about()),
             new Panel('Five stars', $this->fivestars()),
-            new Panel('CEO message', $this->ceo()),
+            // new Panel('CEO message', $this->ceo()),
             new Panel('Environment', $this->environment()),
             new Panel('Motorcycles page', $this->motors()),
 

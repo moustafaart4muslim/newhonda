@@ -67,7 +67,7 @@ class CEO extends Resource
     
 
             Image::make('Image')
-            ->path('homeslider')
+            ->path('ceo')
             ->creationRules('required')
             ,
 
