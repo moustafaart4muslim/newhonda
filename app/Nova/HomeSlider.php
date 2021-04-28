@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use GeneaLabs\NovaMapMarkerField\MapMarker;
+use Laravel\Nova\Fields\Image;
 use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
@@ -61,42 +62,56 @@ class HomeSlider extends Resource
         return [
             ID::make(__('ID'), 'id')
             ->hideFromIndex(),
-            Text::make('English name', 'en_name')
-            ->sortable()
-            ->rules('required', 'max:255'),
 
-            Text::make('Arabic name', 'ar_name')
-            ->sortable()
-            ->rules('required', 'max:255')
-            ->withMeta(['extraAttributes' => [
-                'class'=> 'rtl'
-                ]
-            ]),
-            Textarea::make('English address', 'en_details')
-            ->sortable()
-            ->rules('required'),
 
-            Textarea::make('Arabic address', 'ar_details')
-            ->sortable()
-            ->rules('required' )
-            ->withMeta(['extraAttributes' => [
-                'class'=> 'rtl'
-                ]
-            ]),
+            Image::make('Image')
+            ->path('homeslider')
 
-            // MapMarker::make("Location")
-            // ->hideFromIndex()
-            // ->rules('required' )
-            // ->defaultZoom(11)
-            // ->defaultLatitude(30.0291045)
-            // ->defaultLongitude(31.4027152)
-            // // ->searchProvider('null')
-            // ,
-
-            Textarea::make('Map Embed (Copy embed code from google maps)', 'map')
-            ->sortable()
-            ->rules('required' )
+            ->creationRules('required')
             ,
+
+            Text::make('English Caption',  'en_title')
+            ->hideFromIndex()
+            ,
+
+            Text::make('Arabic Caption',  'ar_title')
+            ->hideFromIndex()
+            ->rules('required' )
+            ->withMeta(['extraAttributes' => [
+                'class'=> 'rtl'
+                ]
+            ])
+            ,
+
+            Textarea::make('English Details', 'en_desc')
+            ->hideFromIndex()
+            ->rules('required')
+            ,
+         
+            Textarea::make('Arabic Details', 'ar_desc')
+            ->hideFromIndex()
+            ->withMeta(['extraAttributes' => [
+                'class'=> 'rtl'
+                ]
+            ])
+            ->rules('required')
+            ,
+            
+            Text::make('Link',  'link')
+            ->hideFromIndex()
+            ->rules('required' )
+            ->help('Hint: When clicking on this caption, it  will link to the url specified here.')
+            ,
+
+
+
+
+
+
+
+
+
+
 
 
        ];

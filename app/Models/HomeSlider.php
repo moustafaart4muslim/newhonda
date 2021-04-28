@@ -14,7 +14,9 @@ use Spatie\EloquentSortable\SortableTrait;
 class HomeSlider extends Model  implements Sortable
 {
     use HasFactory,SoftDeletes,SortableTrait;
-    public $sortable = [
+    public $table = 'home_slider';    
+
+   public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,
     ];    
