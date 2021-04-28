@@ -26,8 +26,18 @@
 				<div class="sQuery slider_img_set">
 
                 
-                        @foreach($slider_images as $image)
-                            <div class="slider_img" style="background: url({{ $image['media']->getFullUrl()}}) center center no-repeat rgb(238, 238, 238); width: 1546px;" id="{{ $image['media']->getCustomProperty($db_caption) }}" data-title="{{ $image['media']->getCustomProperty($db_info) }}" data-link="{{ $image['media']->getCustomProperty('link') }}"></div>                
+                        @foreach($slider_images as $slide)
+                            <?php 
+								//<div class="slider_img" style="background: url({{ $image['media']->getFullUrl()}}) center center no-repeat rgb(238, 238, 238); width: 1546px;" id="{{ $image['media']->getCustomProperty($db_caption) }}" data-title="{{ $image['media']->getCustomProperty($db_info) }}" data-link="{{ $image['media']->getCustomProperty('link') }}"></div>                
+							?>
+
+							<div class="slider_img" style="background: url({{ url('storage/' . $slide->image ) }}) center center no-repeat rgb(238, 238, 238); width: 1546px;"
+							 id="{{ $slide->$db_title }}" data-title="{{ $slide->$db_desc }}"
+							 data-link="{{ $slide->link }}"></div>                
+
+
+
+							 
                         @endforeach
                 </div>
 				<div class="sQuery caption_set">
@@ -40,9 +50,9 @@
 					<div class="ResCaption inner_caption">
 						<div class="ResCaption caption">
 							<div class="caption_block">
-								<a href="{{$slider_images[0]['media']->getCustomProperty('link')  }}">
-									<div class="caption_head"> {{$slider_images[0]['media']->getCustomProperty($db_caption)  }} </div>
-									<div class="caption_details"> {{$slider_images[0]['media']->getCustomProperty($db_info)  }} </div>
+								<a href="{{$slider_images[0]->link  }}">
+									<div class="caption_head"> {{$slider_images[0]->$db_title  }} </div>
+									<div class="caption_details"> {{$slider_images[0]->$db_desc  }} </div>
 								</a>
 							</div>
 						</div>

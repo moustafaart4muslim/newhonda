@@ -6,6 +6,7 @@ use App\Models\Car;
 use App\Models\Category;
 use App\Models\Dealer;
 use App\Models\Event;
+use App\Models\HomeSlider;
 use App\Models\Inspiration;
 use App\Models\Location;
 use App\Models\MotorCategory;
@@ -24,6 +25,10 @@ class SiteController extends BaseController
         $mod = "home";
 
         //Getting home slider
+        $slider_images = HomeSlider::orderBy('sort_order')->get();
+        // dd($slider_images);
+
+        /*
         $cars = $this->cars;
         $motors = $this->motors;
         $slider_images = [];
@@ -60,8 +65,13 @@ class SiteController extends BaseController
                     'car' => $motor,         
                 ];
             }
-        }        
-    //   dd($slider_images);
+        }  
+        
+        
+
+        */
+
+        
         // End Getting home slider
 
 
