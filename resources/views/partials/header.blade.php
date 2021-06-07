@@ -15,7 +15,7 @@
 
 		<nav class="responvsive_nav navbar navbar-expand-lg navbar-light bg-light" id="responvsive_nav">
 			<a class="navbar-brand ins_dis" href="{{ url('/') }}" id="responsive_logo">
-				<img src="structure/ui/logo_default.png"  alt="Honda logo" >
+				<img src="images/logo.svg"  class="honda_logo"  alt="Honda logo" >
 			</a>
 			<button class="navbar-toggler ins_dis" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -124,7 +124,7 @@
 				</div>  
 
 				<div class="logo_set ml-10">
-					<a href="{{ url('/') }}"><img src="structure/ui/logo_default.png" width="130" height="94" alt="Honda logo" ></a>
+					<a href="{{ url('/') }}"><img src="images/logo.svg" width="130" height="94" alt="Honda logo" class="honda_logo" ></a>
 				</div>
 			<div class="menu_set" id="main_menu">
 				<div class="menu" id="menu">

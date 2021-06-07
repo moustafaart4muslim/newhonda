@@ -265,44 +265,51 @@ class SiteController extends BaseController
         $slides  = $car->getMedia('slider');
         $videos  = $car->getMedia('videos');
         // dd($videos);
+        if($car->disable_wheel == "No"){
 
-        $dimentions_str  = $car->getMedia('back_wheel')[0]->manipulations['back_wheel']['manualCrop'];;
-        // dd( $dimentions_str );
-        $back = explode(",", $dimentions_str);
         
-        // $device_width = 574;
-        $car_width = 574;
-        // if(s){//device width < 
-        //     $car_width = $device_width;
 
-        // }
-        $original_image_width = \Spatie\Image\Image::load($car->getMedia('front_wheel')[0]->getFullUrl())->getWidth();
-        $proportion = $original_image_width / $car_width;
+            $dimentions_str  = $car->getMedia('back_wheel')[0]->manipulations['back_wheel']['manualCrop'];;
+            // dd( $dimentions_str );
+            $back = explode(",", $dimentions_str);
+            
+            // $device_width = 574;
+            $car_width = 574;
+            // if(s){//device width < 
+            //     $car_width = $device_width;
+
+            // }
+            $original_image_width = \Spatie\Image\Image::load($car->getMedia('front_wheel')[0]->getFullUrl())->getWidth();
+            $proportion = $original_image_width / $car_width;
 
 
-        $original_image_height = \Spatie\Image\Image::load($car->getMedia('front_wheel')[0]->getFullUrl())->getHeight();
-        $new_image_height = $original_image_height / $proportion ;
-        $height_proportion = $original_image_height / $new_image_height;
-        $saved_wheel_height = $back[1];
-        // $wheel_height = ($new_image_height / 574 ) * 36;
-        $wheel_height =  $saved_wheel_height / $height_proportion;
-        // (int)
-        $back_dimentions = [
-            // $back[2] / ($back[0] / 63),
-            (int)floor($back[3] / $height_proportion),
-            (int)floor($back[2] / $proportion),
-        ];
+            $original_image_height = \Spatie\Image\Image::load($car->getMedia('front_wheel')[0]->getFullUrl())->getHeight();
+            $new_image_height = $original_image_height / $proportion ;
+            $height_proportion = $original_image_height / $new_image_height;
+            $saved_wheel_height = $back[1];
+            // $wheel_height = ($new_image_height / 574 ) * 36;
+            $wheel_height =  $saved_wheel_height / $height_proportion;
+            // (int)
+            $back_dimentions = [
+                // $back[2] / ($back[0] / 63),
+                (int)floor($back[3] / $height_proportion),
+                (int)floor($back[2] / $proportion),
+            ];
 
-        // dd( $back );
-        $dimentions_str  = $car->getMedia('front_wheel')[0]->manipulations['front_wheel']['manualCrop'];
-        $front = explode(",", $dimentions_str);
-        // dd( $dimentions );
-        $front_dimentions = [
-            // $back[2] / ($back[0] / 63),
-            (int)floor($front[3] / $height_proportion),
-            (int)floor($front[2] / $proportion),
-        ];
-
+            // dd( $back );
+            $dimentions_str  = $car->getMedia('front_wheel')[0]->manipulations['front_wheel']['manualCrop'];
+            $front = explode(",", $dimentions_str);
+            // dd( $dimentions );
+            $front_dimentions = [
+                // $back[2] / ($back[0] / 63),
+                (int)floor($front[3] / $height_proportion),
+                (int)floor($front[2] / $proportion),
+            ];
+        }else{
+            $back_dimentions = 0;
+            $front_dimentions = 0;
+            $wheel_height = 0;
+        }
 
 
         return \View::make('site.car')

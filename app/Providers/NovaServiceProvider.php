@@ -24,7 +24,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function boot()
     {
-        parent::boot();
+        
+        ini_set('memory_limit', -1);
+        ini_set('max_execution_time', -1);
+         parent::boot();
         // Nova::style('mostafa', public_path('css/mostafa.css'));
         // Nova::style('invade', __DIR__.'/../dist/css/mostafa.css');
         Nova::sortResourcesBy(function ($resource) {
