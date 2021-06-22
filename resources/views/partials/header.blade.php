@@ -73,6 +73,7 @@
                         <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
                         <a class="dropdown-item" href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
                         <a class="dropdown-item" href="{{ url('fivestars') }}">{{ __('Insurance') }}</a>
+                        <a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
                     </div>
 				</li>
 
@@ -86,15 +87,14 @@
                     </div>
 				</li>
 
-				<li class="nav-item dropdown">
+				<!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{{ __('Honda Owners') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
-                        <a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
                     </div>
-				</li>
+				</li> -->
 
 				<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,7 +134,7 @@
 						<li><a rel="sub_motor"  {{ $mod == "motor"? "class=selected" : "" }} href="{{ url('motorcycles') }}">{{ __('Motorcycles') }}</a></li>
 						<li><a rel="sub_fs"  {{ $mod == "fivestars"? "class=selected" : "" }} href="{{ url('fivestars') }}">{{ __('Five stars') }}</a></li>
 						<li><a rel="sub_fd"  {{ $mod == "dealers"? "class=selected" : "" }} href="#">{{ __('Find a dealer') }}</a></li>
-						<li><a rel="sub_mb"  {{ $mod == "owners"? "class=selected" : "" }} href="{{ url('maintenance') }}">{{ __('Honda Owners') }}</a></li>
+						<!-- <li><a rel="sub_mb"  {{ $mod == "owners"? "class=selected" : "" }} href="{{ url('maintenance') }}">{{ __('Honda Owners') }}</a></li> -->
 						<li><a rel="sub_contact"  {{ $mod == "contact"? "class=selected" : "" }} href="#">{{ __('Contact us') }}</a></li>
 					</ul>
 				</div> 
@@ -152,15 +152,15 @@
 						<a href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
 						<a href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
 						<a href="{{ url('fivestars') }}" class="last">{{ __('Insurance') }}</a>
+						<a href="{{ url('recall') }}" class="last">{{ __('Recall') }}</a>
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_fd">
 						<a href="{{ url('find-cars-dealer') }}" class="first">{{ __('Cars') }}</a>
 						<a href="{{ url('find-motocycles-dealer') }}" class="last">{{ __('Motorcycles') }}</a>
 					</div>
-					<div class="mQuery sub_menu_item" id="sub_mb">
+					<!-- <div class="mQuery sub_menu_item" id="sub_mb">
 						<a href="{{ url('maintenance') }}" class="first">{{ __('Maintenance Booking') }}</a>
-						<a href="{{ url('recall') }}" class="last">{{ __('Recall') }}</a>
-					</div>
+					</div> -->
 					<div class="mQuery sub_menu_item" id="sub_contact">
 						<a href="{{ url('locations') }}" class="first">{{ __('Honda Locations') }}</a>
 						<!-- <a href="Social/">Social Network</a> -->

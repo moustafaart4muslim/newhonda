@@ -68,7 +68,7 @@
 		<section class="five_stars_set">
 			<div id="fsTitle" class="five_stars_title_set">
 			<div class="five_stars_year"></div>
-			<div class="five_stars_title">{{ __('Honda') }} {{ __('five stars') }} <br >{{ __('services') }}</div>
+			<div class="five_stars_title">{{ __('Honda') }}   <br >{{ __('services') }}</div>
 			</div>
 			<div id="fsDetails" class="five_stars_details">{{ $fivestars_text }}</div>
         
