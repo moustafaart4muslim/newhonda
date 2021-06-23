@@ -1,26 +1,25 @@
-﻿سيكيورتي
-fivestars
-change url from fivestars to services
+﻿
+Upload
+هظبط الدومين وسب دومين العربي
+transfter site
+storage link
 
-change menu to be honda services
-add recall to ficestars page
 
-هراجع اي تقفيل مكتوب هنا
-أو اي تقفيل مكتوب في الورق اللي كان معايا وقت الشغل
+disable debug
 
 
 Driver seat height adjustment (manual)
-هظبط الدومين وسب دومين العربي
 
-
-check arabic
-
-check specs in arabic
-disable debug
+سيكيورتي
+Manage fivestars
 ------------
+هراجع الشكل
+هراجع السيو
+هراجع ال
+assets وتقسيمتها واماكنها وكده
 
-
- 
+canonical
+analtyics
 add to all modules: public static $trafficCop = false;
 
 integrate google analytics into honda website and  inside nova
