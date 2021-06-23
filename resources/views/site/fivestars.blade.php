@@ -149,6 +149,35 @@
 			</div>
 			</div>
 		</section>
+
+
+
+
+		<section class="fs_block last" style="opacity: 1;">
+			<div class="fs_logo_set">
+				<div class="fs_logo reacall" style="top: 0px;"></div>
+			</div>
+			<div class="fs_data_set">
+				<div class="fs_title">{{__('Recall')}} </div>
+				<div class="fs_details">
+			
+						@if(resolve('lang') == 'en')
+							For more assistance please call our call center on 19811.
+						@else
+
+							لمزيد من المساعدة يرجى الاتصال بمركز الاتصال على 19811
+
+
+
+						@endif
+
+			</div>
+			</div>
+			<a href="{{ url('recall') }}" class="fs_button">{{__('Recall')}}</a>
+		</section>
+
+
+
 	</div>
 
 

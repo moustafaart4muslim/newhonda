@@ -75,7 +75,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
             'uses' => 'SiteController@fivestars'
         ]
     );
-
+    Route::get(
+        'services',
+        [
+            'as' => 'services',
+            'uses' => 'SiteController@fivestars'
+        ]
+    );
+    
     Route::get(
         'find-motocycles-dealer',
         [

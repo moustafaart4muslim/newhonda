@@ -1019,3 +1019,8 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
+.fs_logo.reacall{
+  background-image: url(../../structure/icons/recall.png);
+  background-color: red;
+}

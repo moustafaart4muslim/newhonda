@@ -18,7 +18,7 @@
 
                 $title = $v->en_name . " [" . $v->category->en_name . "]";
                 if($i != 1) echo ",";
-                echo "'" . $title . "'";
+                echo '"' . $title . '"';
             }
 
         ?>

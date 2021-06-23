@@ -1,8 +1,22 @@
 ﻿سيكيورتي
-menu
 fivestars
+change url from fivestars to services
+
+change menu to be honda services
+add recall to ficestars page
+
+هراجع اي تقفيل مكتوب هنا
+أو اي تقفيل مكتوب في الورق اللي كان معايا وقت الشغل
 
 
+Driver seat height adjustment (manual)
+هظبط الدومين وسب دومين العربي
+
+
+check arabic
+
+check specs in arabic
+disable debug
 ------------
 
 
