@@ -126,13 +126,16 @@
 			<div class="menu_set" id="main_menu">
 				<div class="menu" id="menu">
 					<ul>
-						<li><a rel="sub_about" {{ $mod == "about"? "class=selected" : "" }} href="{{ url('about') }}">{{ __('About') }}</a></li>
-						<li><a rel="sub_cars"  {{ $mod == "cars"? "class=selected" : "" }} href="#">{{ __('Cars') }}</a></li>
+
+						@foreach($menu as $item)
+							<li><a rel="sub_{{ $item->id }}" {{ menu_class($item->id , $mod) }} href="{{ menu_href($item->id) }}">{{ $item->$db_name }}</a></li>
+						@endforeach
+
+						<!-- <li><a rel="sub_cars"  {{ $mod == "cars"? "class=selected" : "" }} href="#">{{ __('Cars') }}</a></li>
 						<li><a rel="sub_motor"  {{ $mod == "motor"? "class=selected" : "" }} href="{{ url('motorcycles') }}">{{ __('Motorcycles') }}</a></li>
 						<li><a rel="sub_fs"  {{ $mod == "fivestars"? "class=selected" : "" }} href="{{ url('services') }}">{{ __('Five stars') }}</a></li>
 						<li><a rel="sub_fd"  {{ $mod == "dealers"? "class=selected" : "" }} href="#">{{ __('Find a dealer') }}</a></li>
-						<!-- <li><a rel="sub_mb"  {{ $mod == "owners"? "class=selected" : "" }} href="{{ url('maintenance') }}">{{ __('Honda Owners') }}</a></li> -->
-						<li><a rel="sub_contact"  {{ $mod == "contact"? "class=selected" : "" }} href="#">{{ __('Contact us') }}</a></li>
+						<li><a rel="sub_contact"  {{ $mod == "contact"? "class=selected" : "" }} href="#">{{ __('Contact us') }}</a></li> -->
 					</ul>
 				</div> 
 				<div class="sub_menu">

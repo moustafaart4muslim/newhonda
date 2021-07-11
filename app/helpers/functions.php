@@ -31,6 +31,71 @@ function sub_menu_href($id){
     return url($segment);
 
 }
+
+function menu_class($id,$mod){
+    if($id == 6){
+        $mod_check  = 'about';
+    }
+
+    if($id == 1){
+        $mod_check  = 'cars';
+    }
+
+    if($id == 2){
+        $mod_check  = 'motor';
+    }
+
+    if($id == 3){
+        $mod_check  = 'fivestars';
+    }
+
+    if($id == 4){
+        $mod_check  = 'dealers';
+    }
+
+    if($id == 5){
+        $mod_check  = 'contact';
+    }
+
+    if($mod == $mod_check){
+        return "class=selected";
+    }else{
+        return '';
+    } 
+}
+function menu_href($id){
+
+    if($id == 6){
+        $segment  = 'about';
+    }
+
+    if($id == 1){
+        $segment  = '#';
+    }
+
+    if($id == 2){
+        $segment  = 'motorcycles';
+    }
+
+    if($id == 3){
+        $segment  = 'services';
+    }
+
+    if($id == 4){
+        $segment  = '#';
+    }
+
+    if($id == 5){
+        $segment  = '#';
+    }
+
+    if($segment == '#'){
+        return '#';
+    }else{
+        return url($segment);
+    }
+
+}
 function brtonl($text){
     return str_replace('<br>', "\n", str_replace('<br />', "\n", $text ) );
 }
