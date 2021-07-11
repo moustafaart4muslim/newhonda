@@ -24,86 +24,84 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ __('About') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						@foreach($submenus as $sub)
-							<a class="dropdown-item" href="{{ sub_menu_href($sub->id) }}">{{ $sub->$db_name }}</a>
-						@endforeach
-				   
-				    </div>
-				</li>
+				@foreach($menu as $item)
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							{{ $item->$db_name }}
+						</a>
+						@if($item->id == 6)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								@foreach($submenus as $sub)
+									<a class="dropdown-item" href="{{ sub_menu_href($sub->id) }}">{{ $sub->$db_name }}</a>
+								@endforeach
+						
+							</div>
+
+						@endif
 
 
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ __('Cars') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @foreach($cars as $car)
-                            <a class="dropdown-item" href="{{ urls('cars', $car->en_name, $car->id) }}">{{ __('Honda') }} {{ $car->$db_name}}</a>
-                        @endforeach
-                    </div>
-				</li>
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{{ __('Motorcycles') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @foreach($motors as $motor)
-                            <a class="dropdown-item" href="{{ urls('motors', $motor->en_name, $motor->id) }}">{{ $motor->$db_name}}</a>
-                        @endforeach
-                    </div>
-				</li>
-<!-- 
-				<li class="nav-item active">
-    				<a class="nav-link" href="{{ url('motorcycles')}}"> </a>
-				</li> -->
+						@if($item->id == 1)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								@foreach($cars as $car)
+									<a class="dropdown-item" href="{{ urls('cars', $car->en_name, $car->id) }}">{{ __('Honda') }} {{ $car->$db_name}}</a>
+								@endforeach
+						
+							</div>
 
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{{ __('Five stars') }} 
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('services') }}"> {{ __('Warranty') }}</a>
-                        <a class="dropdown-item" href="{{ url('trade-in') }}">{{ __('Trade In') }}</a>
-                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
-                        <a class="dropdown-item" href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
-                        <a class="dropdown-item" href="{{ url('services') }}">{{ __('Insurance') }}</a>
-                        <a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
-                    </div>
-				</li>
+						@endif
 
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ __('Find a dealer') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('find-cars-dealer') }}">{{ __('Cars') }}</a>
-                        <a class="dropdown-item" href="{{ url('find-motocycles-dealer') }}">{{ __('Motorcycles') }}</a>
-                    </div>
-				</li>
 
-				<!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ __('Honda Owners') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
-                    </div>
-				</li> -->
+						@if($item->id == 2)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								@foreach($motors as $motor)
+									<a class="dropdown-item" href="{{ urls('motors', $motor->en_name, $motor->id) }}">{{ $motor->$db_name}}</a>
+								@endforeach
+						
+							</div>
 
-				<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ __('Contact us') }} 
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('locations') }}">{{ __('Locations') }}</a>
-                        <a class="dropdown-item" href="{{ url('contact/send') }}">{{ __('Send email') }}</a>
-                    </div>
-				</li>
+						@endif
+
+
+						@if($item->id == 3)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ url('services') }}"> {{ __('Warranty') }}</a>
+								<a class="dropdown-item" href="{{ url('trade-in') }}">{{ __('Trade In') }}</a>
+								<a class="dropdown-item" href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
+								<a class="dropdown-item" href="{{ url('test-drive') }}">{{ __('Test Drive') }}</a>
+								<a class="dropdown-item" href="{{ url('services') }}">{{ __('Insurance') }}</a>
+								<a class="dropdown-item" href="{{ url('recall') }}">{{ __('Recall') }}</a>
+						
+							</div>
+
+						@endif
+
+
+						@if($item->id == 4)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ url('find-cars-dealer') }}">{{ __('Cars') }}</a>
+								<a class="dropdown-item" href="{{ url('find-motocycles-dealer') }}">{{ __('Motorcycles') }}</a>
+						
+							</div>
+
+						@endif
+
+
+						@if($item->id == 5)
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ url('locations') }}">{{ __('Locations') }}</a>
+								<a class="dropdown-item" href="{{ url('contact/send') }}">{{ __('Send email') }}</a>
+							
+							</div>
+
+						@endif
+
+
+					
+
+
+					</li>
+				@endforeach
+
 
 
 				<li class="nav-item {{ config('app.ar')? '':'d-none' }}" >
@@ -139,11 +137,12 @@
 				</div> 
 				<div class="sub_menu">
 					<div class="mQuery sub_menu_item" id="sub_about">
-						<a href="{{ url('about') }}" class="first">{{ __('About Honda') }}</a>
-						<a href="{{ url('ceo') }}">{{ __('CEO Message') }}</a>
-						<a href="{{ url('events') }}">{{ __('Events') }}</a>
-						<a href="{{ url('inspiration') }}">{{ __('Inspiration') }}</a>
-						<a href="{{ url('environment') }}" class="last">{{ __('Environment') }}</a>
+						<!-- class="last" -->
+						@foreach($submenus as $sub)
+							<a href="{{ sub_menu_href($sub->id) }}">{{ $sub->$db_name }}</a>
+						@endforeach
+
+
 					</div>
 					<div class="mQuery sub_menu_item" id="sub_fs">
 						<a href="{{ url('services') }}" class="first">{{ __('Warranty') }}</a>

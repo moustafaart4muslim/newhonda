@@ -24,10 +24,10 @@ class BaseController extends Controller
     }
     
     protected function getMenu(){
-        $this->submenus = Submenu::orderBy('sort_order')->get();
+        $this->submenus = Submenu::where('shown','Yes')->orderBy('sort_order')->get();
         \View::share('submenus', $this->submenus);
 
-        $this->menu = Menu::orderBy('sort_order')->get();
+        $this->menu = Menu::where('shown','Yes')->orderBy('sort_order')->get();
         \View::share('menu', $this->menu);
 
     }
