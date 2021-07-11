@@ -1,16 +1,12 @@
-﻿
-Upload
-هظبط الدومين وسب دومين العربي
-transfter site
-storage link
+﻿سيكيورتي
 
 
-disable debug
 
+
+move laravel to a separate folder
 
 Driver seat height adjustment (manual)
 
-سيكيورتي
 Manage fivestars
 ------------
 هراجع الشكل
