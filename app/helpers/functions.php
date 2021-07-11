@@ -7,7 +7,30 @@ use Illuminate\Http\UploadedFile;
  * Helper  functions
  * Globally available
  */
+function sub_menu_href($id){
+    // 1 about
+    // 2 ceo
+    // 3 events
+    // 4 inspiration
+    // 5 environment
+    if($id == 1){
+        $segment = 'about';
+    }
+    if($id == 2){
+        $segment = 'ceo';
+    }
+    if($id == 3){
+        $segment = 'events';
+    }
+    if($id == 4){
+        $segment = 'environment';
+    }
+    if($id == 5){
+        $segment = 'about';
+    }
+    return url($segment);
 
+}
 function brtonl($text){
     return str_replace('<br>', "\n", str_replace('<br />', "\n", $text ) );
 }

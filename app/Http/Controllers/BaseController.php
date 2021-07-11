@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Menu;
 use App\Models\Motorcycle;
+use App\Models\Submenu;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,11 +19,20 @@ class BaseController extends Controller
         $this->detectLang();
         $this->getCars(); //Global because it's listed in nav and footer of all  pages
         $this->getMotors(); //Global because it's listed in nav and footer of all  pages
+        $this->getMenu(); //Global because it's listed in nav and footer of all  pages
 
     }
     
-    
+    protected function getMenu(){
+        $this->submenus = Submenu::orderBy('sort_order')->get();
+        \View::share('submenus', $this->submenus);
 
+        $this->menu = Menu::orderBy('sort_order')->get();
+        \View::share('menu', $this->menu);
+
+    }
+   
+    
     protected function getCars(){
         $this->cars = Car::get();
         \View::share('cars', $this->cars);

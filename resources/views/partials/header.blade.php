@@ -29,12 +29,11 @@
                         {{ __('About') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('about') }}">{{ __('About Honda') }}</a>
-                        <a class="dropdown-item" href="{{ url('ceo') }}">{{ __('CEO Message') }}</a>
-                        <a class="dropdown-item" href="{{ url('events') }}">{{ __('Events') }}</a>
-                        <a class="dropdown-item" href="{{ url('inspiration') }}">{{ __('Inspiration') }}</a>
-                        <a class="dropdown-item" href="{{ url('environment') }}">{{ __('Environment') }}</a>
-                    </div>
+						@foreach($submenus as $sub)
+							<a class="dropdown-item" href="{{ sub_menu_href($sub->id) }}">{{ $sub->$db_name }}</a>
+						@endforeach
+				   
+				    </div>
 				</li>
 
 
