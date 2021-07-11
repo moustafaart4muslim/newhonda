@@ -128,7 +128,7 @@
 					<ul>
 
 						@foreach($menu as $item)
-							<li><a rel="sub_{{ $item->id }}" {{ menu_class($item->id , $mod) }} href="{{ menu_href($item->id) }}">{{ $item->$db_name }}</a></li>
+							<li><a rel="sub_{{ $item->slug }}" {{ menu_class($item->id , $mod) }} href="{{ menu_href($item->id) }}">{{ $item->$db_name }}</a></li>
 						@endforeach
 
 						<!-- <li><a rel="sub_cars"  {{ $mod == "cars"? "class=selected" : "" }} href="#">{{ __('Cars') }}</a></li>
@@ -139,7 +139,7 @@
 					</ul>
 				</div> 
 				<div class="sub_menu">
-					<div class="mQuery sub_menu_item" id="sub_6">
+					<div class="mQuery sub_menu_item" id="sub_about">
 						<!-- class="last" -->
 						@foreach($submenus as $sub)
 							<a href="{{ sub_menu_href($sub->id) }}">{{ $sub->$db_name }}</a>
@@ -147,7 +147,7 @@
 
 
 					</div>
-					<div class="mQuery sub_menu_item" id="sub_3">
+					<div class="mQuery sub_menu_item" id="sub_fs">
 						<a href="{{ url('services') }}" class="first">{{ __('Warranty') }}</a>
 						<a href="{{ url('trade-in') }}">{{ __('Trade In') }}</a>
 						<a href="{{ url('maintenance') }}">{{ __('Maintenance') }}</a>
@@ -155,19 +155,19 @@
 						<a href="{{ url('services') }}" class="last">{{ __('Insurance') }}</a>
 						<a href="{{ url('recall') }}" class="last">{{ __('Recall') }}</a>
 					</div>
-					<div class="mQuery sub_menu_item" id="sub_4">
+					<div class="mQuery sub_menu_item" id="sub_fd">
 						<a href="{{ url('find-cars-dealer') }}" class="first">{{ __('Cars') }}</a>
 						<a href="{{ url('find-motocycles-dealer') }}" class="last">{{ __('Motorcycles') }}</a>
 					</div>
 					<!-- <div class="mQuery sub_menu_item" id="sub_mb">
 						<a href="{{ url('maintenance') }}" class="first">{{ __('Maintenance Booking') }}</a>
 					</div> -->
-					<div class="mQuery sub_menu_item" id="sub_5">
+					<div class="mQuery sub_menu_item" id="sub_contact">
 						<a href="{{ url('locations') }}" class="first">{{ __('Honda Locations') }}</a>
 						<!-- <a href="Social/">Social Network</a> -->
 						<a href="{{ url('contact/send') }}" class="last">{{ __('Send an E-mail') }}</a>
 					</div>
-                    <div class="mQuery sub_menu_box" id="sub_1" style="width: 442px; display: none; left: 57px;">
+                    <div class="mQuery sub_menu_box" id="sub_cars" style="width: 442px; display: none; left: 57px;">
                         @foreach($cars as $car)
                             <a href="{{ urls('cars', $car->en_name, $car->id ) }}" 
                                 class="sub_menu_box_element first" 
