@@ -23,10 +23,10 @@ function sub_menu_href($id){
         $segment = 'events';
     }
     if($id == 4){
-        $segment = 'environment';
+        $segment = 'inspiration';
     }
     if($id == 5){
-        $segment = 'about';
+        $segment = 'environment';
     }
     return url($segment);
 

@@ -19,8 +19,13 @@ class FormsController extends BaseController
     public function __construct()
     {
         $to =  setting('email_receivers');
-        $this->to = explode("," , $to);
-
+        $not_trimmed_to = explode("," , $to);
+        foreach($not_trimmed_to as $one){
+            $trimmed[] = trim($one);
+        }
+        $this->to = $trimmed;
+        // dd($not_trimmed_to);
+        // dd($this->to);
         parent::__construct();
     }
 
